@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Vevida Optimizer
- * Description: 
+ * Description: De Vevida WordPress plugin wordt standaard geïnstalleerd in de voor WordPress geoptimaliseerde hostingomgeving van Vevida. Deactiveren van deze plugin is mogelijk, maar wordt afgeraden. Voor een optimale veiligheid van WordPress en onze hostingomgeving verzorgt deze plugin het automatisch bijwerken van WordPress, andere plugins en thema's. Veilige WordPress hosting, gewoon bij Vevida.
  * Version: 0.1.1
  * Author: Jan Vlastuin, Jan Reilink
  * Author URI: vevida.hosting
