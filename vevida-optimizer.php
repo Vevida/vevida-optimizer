@@ -50,17 +50,17 @@ add_filter( 'auto_update_theme', 'vevida_optimizer_allow_theme' );
 
 
 /** Plugin defaults **/
-function vevida_deploy_init_plugin() {
-    add_option( 'vevida_deploy_core_major_updates', true );
-    add_option( 'vevida_deploy_core_minor_updates', true );
-    add_option( 'vevida_deploy_theme_updates', true );
+function vevida_optimizer_init_plugin() {
+    add_option( 'vevida_optimizer_core_major_updates', true );
+    add_option( 'vevida_optimizer_core_minor_updates', true );
+    add_option( 'vevida_optimizer_theme_updates', true );
     $loaded_plugins = get_plugins();
     foreach ($loaded_plugins as $key => $val) {
         $plugin_slug = explode( '/', $key )[0];
-        add_option( 'vevida_deploy_plugin_'.$plugin_slug, true );
+        add_option( 'vevida_optimizer_plugin_'.$plugin_slug, true );
     }
 }
-add_action( 'admin_init', 'vevida_deploy_init_plugin' );
+add_action( 'admin_init', 'vevida_optimizer_init_plugin' );
 
 /** Build admin pages, using Settings API **/
 
