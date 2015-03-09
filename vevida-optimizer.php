@@ -62,6 +62,7 @@ function vevida_optimizer_init_plugin() {
 }
 add_action( 'admin_init', 'vevida_optimizer_init_plugin' );
 
+
 /** Build admin pages, using Settings API **/
 
 /** Add Settings Page **/
