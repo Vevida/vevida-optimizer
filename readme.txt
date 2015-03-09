@@ -11,8 +11,7 @@ Vevida Optimizer: Configurable Auto-Update
 
 == Description ==
 
-This plugin extends the automatic update feature already present in WordPress. The core updates can be switched on or off, 
-while the plugin updates can be configured on a per-plugin basis.
+This plugin extends the automatic update feature already present in WordPress. The core updates can be switched on or off, while the plugin updates can be configured on a per-plugin basis.
 
 == Installation ==
 
