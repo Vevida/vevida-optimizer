@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: vlastuin
+Contributors: vlastuin, janr
 Tags: auto-update
 Requires at least: 3.9
 Tested up to: 4.1.1
