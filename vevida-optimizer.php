@@ -104,7 +104,7 @@ function vevida_optimizer_settings_init() {
 	/** Setting section 1, automatic updates. **/
 	add_settings_section(
 		'vevida_optimizer_settings_section_1',
-		__( 'Enable or disable automatic updates', vevida-optimizer ),
+		__( 'Enable or disable automatic updates', 'vevida-optimizer' ),
 		'vevida_optimizer_settings_section_1_callback',
 		'vevida_optimizer_settings'
 	);
