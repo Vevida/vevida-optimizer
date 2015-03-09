@@ -84,7 +84,7 @@ function vevida_optimizer_settings_page() {
         <?php settings_errors(); ?>
  
         <h2><?php __( 'Automatic update settings', 'vevida-optimizer' ); ?></h2>
-        <p>Het is mogelijk om de verschillende soorten automatische updates uit te schakelen. Ook is het mogelijk het bijwerken van specifieke plugins uit te schakelen. Doe dit alleen als het automatisch uitvoeren van updates problematisch is.</p>
+        <p><?php _e( "Het is mogelijk om de verschillende soorten automatische updates uit te schakelen. Ook is het mogelijk het bijwerken van specifieke plugins uit te schakelen. Doe dit alleen als het automatisch uitvoeren van updates problematisch is.", 'vevida-optimizer' ); ?> </p>
 
         <form method="post" action="options.php">
             <?php
