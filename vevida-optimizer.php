@@ -110,13 +110,13 @@ function vevida_optimizer_settings_init() {
 	);
 	add_settings_field(
 		'vevida_optimizer_core_major_updates',
-		'Werk major versies bij',
+		__( 'Update to new major version', 'vevida-optimizer' ),
 		'vevida_optimizer_checkbox_callback',
 		'vevida_optimizer_settings',
 		'vevida_optimizer_settings_section_1',
 		array (	
 			'vevida_optimizer_core_major_updates', 
-			'Bijvoorbeeld: van WordPress versie 4.1 naar 4.2' )
+			__( 'e.g. WordPress 4.1 to 4.2', 'vevida-optimizer' ) )
 	);
 	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_core_major_updates' );
 	add_settings_field(

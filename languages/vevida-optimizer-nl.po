@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Vevida Optimizer 0.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/vevida-optimizer\n"
-"POT-Creation-Date: 2015-03-09 17:51:17+00:00\n"
-"PO-Revision-Date: 2015-03-09 18:54+0100\n"
+"POT-Creation-Date: 2015-03-09 17:59:00+00:00\n"
+"PO-Revision-Date: 2015-03-09 18:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -38,6 +38,14 @@ msgstr ""
 #: vevida-optimizer.php:107
 msgid "Enable or disable automatic updates"
 msgstr "Automatische updates in- of uitschakelen"
+
+#: vevida-optimizer.php:113
+msgid "Update to new major version"
+msgstr "Bijwerken van major versie updates"
+
+#: vevida-optimizer.php:119
+msgid "e.g. WordPress 4.1 to 4.2"
+msgstr "Bijvoorbeeld: van Wordpress versie 4.1 naar 4.2"
 
 #. Plugin Name of the plugin/theme
 msgid "Vevida Optimizer"
