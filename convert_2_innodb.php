@@ -1,4 +1,5 @@
-	add_action('admin_menu', 'convert_myisam_to_innodbgenerate_page');
+<?php
+        add_action('admin_menu', 'convert_myisam_to_innodbgenerate_page');
 	function convert_myisam_to_innodbgenerate_page() {
 		if(function_exists('add_submenu_page')) add_submenu_page('tools.php', __('Convert DB tables'),
 			__('Convert DB tables'), 'manage_options', 'ConvertMyisamToInnodb_settings_page', 'convert_db_tables');
