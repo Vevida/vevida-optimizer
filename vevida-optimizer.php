@@ -83,8 +83,8 @@ function vevida_optimizer_settings_page() {
     <div class="wrap">
         <?php settings_errors(); ?>
  
-        <h2><?php __( 'Automatic update settings', 'vevida-optimizer' ); ?></h2>
-        <p><?php _e( "Het is mogelijk om de verschillende soorten automatische updates uit te schakelen. Ook is het mogelijk het bijwerken van specifieke plugins uit te schakelen. Doe dit alleen als het automatisch uitvoeren van updates problematisch is.", 'vevida-optimizer' ); ?> </p>
+        <h2><?php _e( 'Automatic update settings', 'vevida-optimizer' ); ?></h2>
+        <p><?php _e( "It is possible to disable the different kinds of automatic updates. Also, updates for specific plugins can be disabled. Only use this option when automatically updating a plugin is not possible or problematic.", 'vevida-optimizer' ); ?> </p>
 
         <form method="post" action="options.php">
             <?php
@@ -121,18 +121,18 @@ function vevida_optimizer_settings_init() {
 	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_core_major_updates' );
 	add_settings_field(
 		'vevida_optimizer_core_minor_updates',
-		'Werk minor versies bij',
+		__( 'Update to new minor version', 'vevida-optimizer' ),
 		'vevida_optimizer_checkbox_callback',
 		'vevida_optimizer_settings',
 		'vevida_optimizer_settings_section_1',
 		array (	
 			'vevida_optimizer_core_minor_updates', 
-			'Bijvoorbeeld: van WordPress versie 4.0 naar 4.0.1' )
+			__( 'e.g. WordPress 4.1 to 4.1.1', 'vevida-optimizer' )  )
 	);
 	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_core_minor_updates' );
 	add_settings_field(
 		'vevida_optimizer_theme_updates',
-		'Werk thema\'s bij',
+		__( 'Update themes', 'vevida-optimizer' ),
 		'vevida_optimizer_checkbox_callback',
 		'vevida_optimizer_settings',
 		'vevida_optimizer_settings_section_1',
@@ -145,7 +145,7 @@ function vevida_optimizer_settings_init() {
 	/** Setting section 2, exclude specific plugins. **/
 	add_settings_section(
 		'vevida_optimizer_settings_section_2',
-		'Bijwerken van plugins in- of uitschakelen',
+		__( 'Enable or disable plugin updates', 'vevida-optimizer' ),
 		'vevida_optimizer_settings_section_2_callback',
 		'vevida_optimizer_settings'
 	);
@@ -171,10 +171,10 @@ add_action( 'admin_init', 'vevida_optimizer_settings_init' );
  
 /** Format Callbacks **/
 function vevida_optimizer_settings_section_1_callback() {
-    echo( 'Standaard zijn alle soorten updates geactiveerd. Wijzig dit alleen als u problemen ondervindt bij het automatisch bijwerken. Los in dat geval het probleem op, en heractiveer het automatisch bijwerken.' );
+    echo( __( 'All updates are enabled by default. Only change this if your website experiences issues after an automatic update. In that case, resolve the issue that blocks the automatic update process, and reenable automatic updates.', 'vevida-optimizer' ) );
 }
 function vevida_optimizer_settings_section_2_callback() {
-    echo( 'Sommige plugins vereisen een afwijkende methode voor het bijwerken. Of de plugin gaat simpelweg stuk als gevolg van de update. In dat geval kan het automatisch bijwerken van die plugin (tijdelijk) worden uitgeschakeld.' );
+    echo( __( 'Some plugins require a different update method. Or the plugin simpy breaks as a result of the update. In that case automatic updates for the plugin can be (temporarily) disabled.', 'vevida-optimizer' ) );
 }
 function vevida_optimizer_checkbox_callback( $args ) {
     $option = get_option( $args[0] );
@@ -186,7 +186,7 @@ function vevida_optimizer_checkbox_callback( $args ) {
 
 //Adds settings link on Installed Plugins page
 function vevida_optimizer_plugin_link_settings($links) { 
-  $settings_link = '<a href="index.php?page=vevida-optimizer">Instellingen</a>'; 
+  $settings_link = '<a href="index.php?page=vevida-optimizer">'._e( 'Settings', 'vevida-optimizer' ).'</a>'; 
   array_unshift( $links, $settings_link ); 
   return $links; 
 }

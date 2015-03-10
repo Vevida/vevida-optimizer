@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Vevida Optimizer 0.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/vevida-optimizer\n"
-"POT-Creation-Date: 2015-03-09 17:59:00+00:00\n"
-"PO-Revision-Date: 2015-03-09 18:59+0100\n"
+"POT-Creation-Date: 2015-03-10 20:28:44+00:00\n"
+"PO-Revision-Date: 2015-03-10 21:30+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -25,10 +25,9 @@ msgstr "Instellingen voor automatische updates"
 
 #: vevida-optimizer.php:87
 msgid ""
-"Het is mogelijk om de verschillende soorten automatische updates uit te "
-"schakelen. Ook is het mogelijk het bijwerken van specifieke plugins uit te "
-"schakelen. Doe dit alleen als het automatisch uitvoeren van updates "
-"problematisch is."
+"It is possible to disable the different kinds of automatic updates. Also, "
+"updates for specific plugins can be disabled. Only use this option when "
+"automatically updating a plugin is not possible or problematic."
 msgstr ""
 "Het is mogelijk om de verschillende soorten automatische updates uit te "
 "schakelen. Ook is het mogelijk het bijwerken van specifieke plugins uit te "
@@ -46,6 +45,46 @@ msgstr "Bijwerken van major versie updates"
 #: vevida-optimizer.php:119
 msgid "e.g. WordPress 4.1 to 4.2"
 msgstr "Bijvoorbeeld: van Wordpress versie 4.1 naar 4.2"
+
+#: vevida-optimizer.php:124
+msgid "Update to new minor version"
+msgstr "Bijwerken van minor versie updates"
+
+#: vevida-optimizer.php:130
+msgid "e.g. WordPress 4.1 to 4.1.1"
+msgstr "Bijvoorbeeld: van Wordpress versie 4.1 naar 4.1.1"
+
+#: vevida-optimizer.php:135
+msgid "Update themes"
+msgstr "Thema's bijwerken"
+
+#: vevida-optimizer.php:148
+msgid "Enable or disable plugin updates"
+msgstr "Plugin updates in- of uitschakelen"
+
+#: vevida-optimizer.php:174
+msgid ""
+"All updates are enabled by default. Only change this if your website "
+"experiences issues after an automatic update. In that case, resolve the issue "
+"that blocks the automatic update process, and reenable automatic updates."
+msgstr ""
+"Standaard zijn alle soorten updates geactiveerd. Wijzig dit alleen als u "
+"problemen ondervindt bij het automatisch bijwerken. Los in dat geval het "
+"probleem op, en heractiveer het automatisch bijwerken."
+
+#: vevida-optimizer.php:177
+msgid ""
+"Some plugins require a different update method. Or the plugin simpy breaks as a "
+"result of the update. In that case automatic updates for the plugin can be "
+"(temporarily) disabled."
+msgstr ""
+"Sommige plugins vereisen een afwijkende methode voor het bijwerken. Of de "
+"plugin gaat simpelweg stuk als gevolg van de update. In dat geval kan het "
+"automatisch bijwerken van die plugin (tijdelijk) worden uitgeschakeld."
+
+#: vevida-optimizer.php:189
+msgid "Settings"
+msgstr "Instellingen"
 
 #. Plugin Name of the plugin/theme
 msgid "Vevida Optimizer"
@@ -67,3 +106,14 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "vevida.hosting"
 msgstr ""
+
+#~ msgid ""
+#~ "Het is mogelijk om de verschillende soorten automatische updates uit te "
+#~ "schakelen. Ook is het mogelijk het bijwerken van specifieke plugins uit te "
+#~ "schakelen. Doe dit alleen als het automatisch uitvoeren van updates "
+#~ "problematisch is."
+#~ msgstr ""
+#~ "Het is mogelijk om de verschillende soorten automatische updates uit te "
+#~ "schakelen. Ook is het mogelijk het bijwerken van specifieke plugins uit te "
+#~ "schakelen. Doe dit alleen als het automatisch uitvoeren van updates "
+#~ "problematisch is."
