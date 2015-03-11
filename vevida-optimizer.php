@@ -17,6 +17,8 @@ if ( ! function_exists( 'add_action' ) ) {
 	exit;
 }
 
+include( plugin_dir_path( __FILE__ ) . 'convert_2_innodb.php');
+
 /**
  * Load textdomain for vevida optimizer plugin
  */
@@ -48,12 +50,17 @@ function vevida_optimizer_allow_theme( $update ) {
 }
 add_filter( 'auto_update_theme', 'vevida_optimizer_allow_theme' );
 
+function vevida_optimizer_allow_translation( $update ){
+    return get_option( 'vevida_optimizer_translations_updates' );
+}
+add_filter( 'auto_update_translation', 'vevida_optimizer_allow_translation' );
 
 /** Plugin defaults **/
 function vevida_optimizer_init_plugin() {
     add_option( 'vevida_optimizer_core_major_updates', true );
     add_option( 'vevida_optimizer_core_minor_updates', true );
     add_option( 'vevida_optimizer_theme_updates', true );
+    add_option( 'vevida_optimizer_translations_updates', true );
     $loaded_plugins = get_plugins();
     foreach ($loaded_plugins as $key => $val) {
         $plugin_slug = explode( '/', $key )[0];
@@ -141,7 +148,18 @@ function vevida_optimizer_settings_init() {
 			'' )
 	);
 	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_theme_updates' );
- 
+	add_settings_field(
+		'vevida_optimizer_translations_updates',
+		__( 'Update Translations', 'vevida-optimizer' ),
+		'vevida_optimizer_checkbox_callback',
+		'vevida_optimizer_settings',
+		'vevida_optimizer_settings_section_1',
+		array (	
+			'vevida_optimizer_theme_updates', 
+			'' )
+	);
+	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_translations_updates' );
+
 	/** Setting section 2, exclude specific plugins. **/
 	add_settings_section(
 		'vevida_optimizer_settings_section_2',
