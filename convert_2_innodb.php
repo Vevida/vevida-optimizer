@@ -21,7 +21,6 @@
 			<div class="wrap">
 				<h2>Database convert complete!</h2>
 				<p>Either your database tables were already created with the InnoDB storage engine, or the convert process is completed successfully.</p>
-				<p>You can now <a href="plugins.php">deactivate</a> this plugin.</p>
 			</div>
 			<?php
 		}
