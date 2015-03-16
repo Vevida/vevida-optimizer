@@ -14,7 +14,7 @@ Released under the terms of the GNU General Public License.
 
 == Description ==
 
-This plugin extends the automatic update feature already present in WordPress. The core updates can be switched on or off, while the plugin updates can be configured on a per-plugin basis.
+This plugin extends the automatic update feature already present in WordPress. The core updates can be switched on or off, themes and translations can be automatically updated, and the plugin updates can be configured on a per-plugin basis.
 Also, through this plugin the database tables can be optimized for newer versions of mySQL, converting older myISAM tables to InnoDB.
 
 == Installation ==
