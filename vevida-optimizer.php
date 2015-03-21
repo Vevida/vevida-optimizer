@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Vevida Optimizer
- * Description: The Vevida Optimizer plugin is enabled by default on the WordPress hosting platform at Vevida. The plugin introduces automatic updates for all WordPress components, such as the WordPress core, themes and plugins. Also, the plugin introduces database improvements for upgraded WordPress sites. Updated WordPress sites are less vulnerable to attacks, offer better performance and allow us to offer a safer webhosting platform.
+ * Description: Configure automatic updates for each WordPress component, and optimize the mySQL database tables.
  * Version: 1.0.3
  * Author: Jan Vlastuin, Jan Reilink
  * Author URI: vevida.hosting
