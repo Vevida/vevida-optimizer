@@ -3,7 +3,7 @@ Contributors: vlastuin, janr
 Tags: auto-update, updates, mysql optimization
 Requires at least: 3.9
 Tested up to: 4.1.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
