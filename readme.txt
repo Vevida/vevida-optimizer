@@ -87,6 +87,11 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 
 == Changelog ==
 
+= 1.0.4 =
+Release date: March 21th 2015
+* Rewrite of readme.txt
+* Minor NL language updates 
+
 = 1.0.3 =
 Release date: March 20th 2015
 * Minor language improvements 
