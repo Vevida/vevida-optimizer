@@ -3,7 +3,7 @@ Contributors: vlastuin, janr
 Tags: auto-update, updates, mysql optimization
 Requires at least: 3.9
 Tested up to: 4.1.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,11 +26,13 @@ The core updates can be switched on or off, themes and translations can be
 automatically updated, and the plugin updates can be configured on a per-plugin 
 basis. 
 
-At the same time, many websites started originally with older versions of 
+Many websites started originally with older versions of 
 WordPress. Previously those installs used older versions of mySQL, when the 
-default table format was myISAM. Nowadays, mySQL uses the InnoDB format, which 
+default table format was myISAM. Nowadays, modern versions of mySQL use the 
+InnoDB format, which 
 is currently enabled by default. Through this plugin the database tables can be 
-optimized for newer versions of mySQL, converting older myISAM tables to InnoDB. 
+optimized for those newer versions of mySQL, converting older myISAM tables to 
+InnoDB. 
 This is required only once, and only when you have been using WordPress for a 
 long time or with a hosting provider that has not actively kept its mySQL 
 installations up to date.
@@ -63,6 +65,12 @@ provider to bugs and other attack vectors that can enable an attacker to hack
 into your website. Keeping your WordPress website up-to-date is one of the key 
 ingredients to keeping your website secure.
 
+= Why has this or that plugin not been updated yet? =
+
+First check whether automatic updates are enabled for the plugin in 'Dashboard' 
+-> 'Update Settings'. If automatic updates are enabled, it can take up to 12 
+hours for a plugin to actually update.
+
 = How can I optimize my database tables =
 
 Go to Tools -> Convert DB tables. This will launch the utility that converts 
@@ -87,16 +95,23 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 
 == Changelog ==
 
+= 1.0.5 =
+Release date: unknown
+* Update FAQ
+
 = 1.0.4 =
 Release date: March 21th 2015
+
 * Rewrite of readme.txt
 * Minor NL language updates 
 
 = 1.0.3 =
 Release date: March 20th 2015
+
 * Minor language improvements 
 * version number fix.
 
 = 1.0.2 =
 Release date: March 11th 2015 
+
 * Now includes an admin page based on the Settings API.
