@@ -97,7 +97,9 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 
 = 1.0.5 =
 Release date: unknown
+
 * Update FAQ
+* Rewrite InnoDB conversion using AJAX request
 
 = 1.0.4 =
 Release date: March 21th 2015
