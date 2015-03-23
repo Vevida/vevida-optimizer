@@ -40,9 +40,9 @@ function convert_db_tables() {
 add_action( 'wp_ajax_vevida-optimizer-convertMyisamToInnodb', 'vevida_optimizer_convertMyisamToInnodb' );
 function vevida_optimizer_convertMyisamToInnodb() {
     if ( !convertTables() ) {
-        echo '<h2>Database convert complete!</h2><p>Either your database tables were already created with the InnoDB storage engine, or the convert process is completed successfully.</p>';
-    } else {
         echo '<h2>Whoops, error!</h2><p>Turns out something went wrong... Please check your PHP error log file.</p>';
+    } else {
+        echo '<h2>Database convert complete!</h2><p>Either your database tables were already created with the InnoDB storage engine, or the convert process is completed successfully.</p>';
     }
     wp_die();
 }
