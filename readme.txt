@@ -100,6 +100,8 @@ Release date: unknown
 
 * Update FAQ
 * Rewrite InnoDB conversion using AJAX request
+* Skip InnoDB conversion on fulltext indexed tables
+* Removed unused function
 
 = 1.0.4 =
 Release date: March 21th 2015

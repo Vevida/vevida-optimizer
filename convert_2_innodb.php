@@ -49,15 +49,15 @@ function vevida_optimizer_convertMyisamToInnodb() {
 function convertTables() {
     global $wpdb;
     foreach ( $wpdb->get_results("SELECT table_name FROM information_schema.tables WHERE ENGINE = 'MyISAM' AND  table_name LIKE '{$wpdb->prefix}%'")  as $key => $row) {
-		$fulltextIndex = $wpdb->get_results("SELECT
+        $fulltextIndex = $wpdb->get_results("SELECT
 			table_schema,
 			table_name
 			FROM information_schema.statistics
 			WHERE index_type = 'FULLTEXT'
 			AND table_name = ".'{$row}');
-			if ( $fulltextIndex ) {
-				continue;
-			}
+	if ( $fulltextIndex ) {
+            continue;
+	}
         $wpdb->query("ALTER TABLE `{$row->table_name}` ENGINE=InnoDB");
     }
 
