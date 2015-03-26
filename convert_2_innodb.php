@@ -21,7 +21,8 @@ function convert_db_tables() {
                 $(document).on('click', '#vevida_optimizer_convert', function(e) {
                     e.preventDefault();         
                     var data = {
-                            'action': 'vevida-optimizer-convertMyisamToInnodb'
+                            'action': 'vevida-optimizer-convertMyisamToInnodb',
+                            '_ajax_nonce': '<?php echo wp_create_nonce( 'vevida-optimizer-nonce' ); ?>'
                     };
 
                     $.post( ajaxurl, data, function( response ) {
@@ -38,6 +39,7 @@ function convert_db_tables() {
 
 add_action( 'wp_ajax_vevida-optimizer-convertMyisamToInnodb', 'vevida_optimizer_convertMyisamToInnodb' );
 function vevida_optimizer_convertMyisamToInnodb() {
+    check_ajax_referer( 'vevida-optimizer-nonce' );
     if ( !convertTables() ) {
         echo '<h2>Whoops, error!</h2><p>Turns out something went wrong... Please check your PHP error log file.</p>';
     } else {
