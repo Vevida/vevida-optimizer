@@ -80,7 +80,3 @@ function convertTables() {
         return true;
     }
 }
-
-function optimizeTables () {
-        // Todo
-}
