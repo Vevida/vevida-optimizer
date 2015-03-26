@@ -3,7 +3,7 @@ Contributors: vlastuin, janr
 Tags: auto-update, updates, mysql optimization
 Requires at least: 3.9
 Tested up to: 4.1.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,11 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 1. The submenu under 'Dashboard' that allows the configuration of automatic updates.
 
 == Changelog ==
+
+= 1.0.7 =
+Release date: March 26th 2015
+
+* Fixed version numbering
 
 = 1.0.6 =
 Release date: March 26th 2015
