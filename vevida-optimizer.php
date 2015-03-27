@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vevida Optimizer
  * Description: Configure automatic updates for each WordPress component, and optimize the mySQL database tables.
- * Version: 1.0.7
+ * Version: 1.0.8
  * Author: Jan Vlastuin, Jan Reilink
  * Author URI: vevida.hosting
  * License: GPLv2
@@ -61,6 +61,7 @@ function vevida_optimizer_init_plugin() {
     add_option( 'vevida_optimizer_core_minor_updates', true );
     add_option( 'vevida_optimizer_theme_updates', true );
     add_option( 'vevida_optimizer_translations_updates', true );
+    add_option( 'vevida_optimizer_send_email', true );
     $loaded_plugins = get_plugins();
     foreach ($loaded_plugins as $key => $val) {
         $plugin_slug = explode( '/', $key )[0];
@@ -68,6 +69,18 @@ function vevida_optimizer_init_plugin() {
     }
 }
 add_action( 'admin_init', 'vevida_optimizer_init_plugin' );
+
+function vevida_optimizer_send_update_mail() {
+    wp_mail( get_option( 'admin_email' ), 
+            "Your website was automatically updated", 
+            '' );
+} 
+if ( get_option( 'vevida_optimizer_send_email') ) {
+    add_action( 'automatic_updates_complete', 'vevida_optimizer_send_update_mail');
+//    add_action( 'admin_init', 'vevida_optimizer_send_update_mail' );
+    add_filter( 'automatic_updates_send_debug_email', '__return_true' );
+}
+
 
 
 /** Build admin pages, using Settings API **/
@@ -191,6 +204,26 @@ function vevida_optimizer_settings_init() {
             );
             register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_plugin_'.$plugin_slug );
         }
+        
+	/** Setting section 3, enable emails after update. **/
+	add_settings_section(
+		'vevida_optimizer_settings_section_3',
+		__( 'Send email notifications', 'vevida-optimizer' ),
+		'vevida_optimizer_settings_section_3_callback',
+		'vevida_optimizer_settings'
+	);    
+	add_settings_field(
+		'vevida_optimizer_send_email',
+		__( 'Enable notifications', 'vevida-optimizer' ),
+		'vevida_optimizer_checkbox_callback',
+		'vevida_optimizer_settings',
+		'vevida_optimizer_settings_section_3',
+		array (	
+			'vevida_optimizer_send_email', 
+			'' )
+	);
+	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_translations_updates' );
+        
 }
 add_action( 'admin_init', 'vevida_optimizer_settings_init' );
  
@@ -200,6 +233,9 @@ function vevida_optimizer_settings_section_1_callback() {
 }
 function vevida_optimizer_settings_section_2_callback() {
     echo( __( 'Some plugins require a different update method. Or the plugin simpy breaks as a result of the update. In that case automatic updates for the plugin can be (temporarily) disabled.', 'vevida-optimizer' ) );
+}
+function vevida_optimizer_settings_section_3_callback() {
+    echo( __( 'An email can be sent after each automatic update to notify the site admin ('.get_option( 'admin_email' ).') of the update. This can be useful in troubleshooting the site after an automatic update.', 'vevida-optimizer' ) );
 }
 function vevida_optimizer_checkbox_callback( $args ) {
     $option = get_option( $args[0] );

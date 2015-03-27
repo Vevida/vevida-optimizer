@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: vlastuin, janr
-Tags: auto-update, updates, mysql optimization
+Tags: auto-update, updates, mysql optimization, update, automatic update, vevida, hosting
 Requires at least: 3.9
 Tested up to: 4.1.1
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,13 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 1. The submenu under 'Dashboard' that allows the configuration of automatic updates.
 
 == Changelog ==
+
+= 1.0.8 =
+Release date:
+
+* Added email function to send email with the update results after update
+* Email function configurable in settings
+* New translation strings added
 
 = 1.0.7 =
 Release date: March 26th 2015
