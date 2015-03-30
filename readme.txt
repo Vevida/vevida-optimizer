@@ -96,7 +96,7 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 == Changelog ==
 
 = 1.0.8 =
-Release date:
+Release date: March 30th 2015
 
 * Added email function to send email with the update results after update
 * Email function configurable in settings
