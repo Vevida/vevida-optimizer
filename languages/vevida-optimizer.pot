@@ -4,13 +4,31 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Vevida Optimizer 1.0.8\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/vevida-optimizer\n"
-"POT-Creation-Date: 2015-03-27 09:49:55+00:00\n"
+"POT-Creation-Date: 2015-03-30 19:25:28+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: convert_2_innodb.php:45
+msgid "Whoops, error!"
+msgstr ""
+
+#: convert_2_innodb.php:47
+msgid "Turns out something went wrong... Please check your PHP error log file."
+msgstr ""
+
+#: convert_2_innodb.php:51
+msgid "Database convert complete!"
+msgstr ""
+
+#: convert_2_innodb.php:53
+msgid ""
+"Either your database tables were already created with the InnoDB storage "
+"engine, or the convert process is completed successfully."
+msgstr ""
 
 #: vevida-optimizer.php:92
 msgid "Update Settings"

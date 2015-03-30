@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Vevida Optimizer 0.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/vevida-optimizer\n"
-"POT-Creation-Date: 2015-03-27 09:47:27+00:00\n"
-"PO-Revision-Date: 2015-03-27 10:48+0100\n"
+"POT-Creation-Date: 2015-03-30 19:25:28+00:00\n"
+"PO-Revision-Date: 2015-03-30 21:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -14,6 +14,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.7.5\n"
+
+#: convert_2_innodb.php:45
+msgid "Whoops, error!"
+msgstr "Helaas, een probleem!"
+
+#: convert_2_innodb.php:47
+msgid "Turns out something went wrong... Please check your PHP error log file."
+msgstr "Er is helaas iets misgegaan. Controleer uw PHP fouten log."
+
+#: convert_2_innodb.php:51
+msgid "Database convert complete!"
+msgstr "Database conversie gelukt!"
+
+#: convert_2_innodb.php:53
+msgid ""
+"Either your database tables were already created with the InnoDB storage "
+"engine, or the convert process is completed successfully."
+msgstr ""
+"Uw database was reeds volledig met InnoDB tabellen gevuld of het "
+"conversieproces is succesvol afgerond."
 
 #: vevida-optimizer.php:92
 msgid "Update Settings"

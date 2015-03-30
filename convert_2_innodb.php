@@ -41,9 +41,17 @@ add_action( 'wp_ajax_vevida-optimizer-convertMyisamToInnodb', 'vevida_optimizer_
 function vevida_optimizer_convertMyisamToInnodb() {
     check_ajax_referer( 'vevida-optimizer-nonce' );
     if ( !convertTables() ) {
-        echo '<h2>Whoops, error!</h2><p>Turns out something went wrong... Please check your PHP error log file.</p>';
+        echo '<h2>';
+        _e( 'Whoops, error!', 'vevida-optimizer' );
+        echo '</h2><p>';
+        _e( 'Turns out something went wrong... Please check your PHP error log file.', 'vevida-optimizer' );
+        echo '</p>';
     } else {
-        echo '<h2>Database convert complete!</h2><p>Either your database tables were already created with the InnoDB storage engine, or the convert process is completed successfully.</p>';
+        echo '<h2>';
+        _e( 'Database convert complete!', 'vevida-optimizer' );
+        echo '</h2><p>';
+        _e( 'Either your database tables were already created with the InnoDB storage engine, or the convert process is completed successfully.', 'vevida-optimizer' );
+        echo '</p>';
     }
     wp_die();
 }
