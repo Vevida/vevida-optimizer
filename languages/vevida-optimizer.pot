@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Vevida Optimizer package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Vevida Optimizer 1.0.8\n"
+"Project-Id-Version: Vevida Optimizer 1.0.9\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/vevida-optimizer\n"
-"POT-Creation-Date: 2015-03-30 19:25:28+00:00\n"
+"POT-Creation-Date: 2015-03-30 22:12:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,84 +12,153 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: convert_2_innodb.php:45
-msgid "Whoops, error!"
+#: convert_2_innodb.php:12
+msgid "Convert MySQL MyISAM tables to InnoDB"
+msgstr ""
+
+#: convert_2_innodb.php:13
+msgid ""
+"This plugin will convert your old MyISAM MySQL database tables to the InnoDB "
+"storage engine."
+msgstr ""
+
+#: convert_2_innodb.php:14
+msgid ""
+"In the earlier days of MySQL, the default storage engine for your database "
+"was MyISAM. This is why you still encounter a lot of examples with "
+"<code>engine=MyISAM</code> online. Nowadays, the InnoDB storage engine is "
+"MySQL's default. MyISAM is no longer actively developed, InnoDB is. "
+"Therefore, most "
+msgstr ""
+
+#: convert_2_innodb.php:16
+msgid "MySQL performance optimizations"
+msgstr ""
+
+#: convert_2_innodb.php:18
+msgid ""
+"are for the InnoDB engine and it's wise to choose this as your table storage "
+"engine."
+msgstr ""
+
+#: convert_2_innodb.php:19
+msgid ""
+"Please note, the performance gain depends on your web hosting company's "
+"MySQL server configuration. Contact your hosting provider for more "
+"information about the specific MySQL (InnoDB storage engine) set up. If you "
+"want to know more about this conversion process, see my blog post on how to"
+msgstr ""
+
+#: convert_2_innodb.php:21
+msgid "convert MySQL MyISAM tables to InnoDB"
+msgstr ""
+
+#: convert_2_innodb.php:22
+msgid "and how to"
+msgstr ""
+
+#: convert_2_innodb.php:24
+msgid "optimize all MySQL tables with MySQLi multi_query"
+msgstr ""
+
+#: convert_2_innodb.php:26
+msgid ""
+"The plugin tries to be as gentle as possible, however, you use this plugin "
+"at your own risk!"
+msgstr ""
+
+#: convert_2_innodb.php:27
+msgid ""
+"As a bonus, the plugin optimizes the WordPress <code>wp_options</code> table "
+"with an index on the autoload column too. More on that"
+msgstr ""
+
+#: convert_2_innodb.php:29
+msgid "here"
 msgstr ""
 
 #: convert_2_innodb.php:47
+msgid "Convert my MySQL tables"
+msgstr ""
+
+#: convert_2_innodb.php:58
+msgid "Whoops, error!"
+msgstr ""
+
+#: convert_2_innodb.php:60
 msgid "Turns out something went wrong... Please check your PHP error log file."
 msgstr ""
 
-#: convert_2_innodb.php:51
+#: convert_2_innodb.php:64
 msgid "Database convert complete!"
 msgstr ""
 
-#: convert_2_innodb.php:53
+#: convert_2_innodb.php:66
 msgid ""
 "Either your database tables were already created with the InnoDB storage "
 "engine, or the convert process is completed successfully."
 msgstr ""
 
-#: vevida-optimizer.php:92
+#: vevida-optimizer.php:85
 msgid "Update Settings"
 msgstr ""
 
-#: vevida-optimizer.php:100
+#: vevida-optimizer.php:93
 msgid "Convert DB tables"
 msgstr ""
 
-#: vevida-optimizer.php:113
+#: vevida-optimizer.php:106
 msgid "Automatic update settings"
 msgstr ""
 
-#: vevida-optimizer.php:114
+#: vevida-optimizer.php:107
 msgid ""
 "It is possible to disable the different kinds of automatic updates. Also, "
 "updates for specific plugins can be disabled. Only use this option when "
 "automatically updating a plugin is not possible or problematic."
 msgstr ""
 
-#: vevida-optimizer.php:134
+#: vevida-optimizer.php:127
 msgid "Enable or disable automatic updates"
 msgstr ""
 
-#: vevida-optimizer.php:140
+#: vevida-optimizer.php:133
 msgid "Update to new major version"
 msgstr ""
 
-#: vevida-optimizer.php:146
+#: vevida-optimizer.php:139
 msgid "e.g. WordPress 4.1 to 4.2"
 msgstr ""
 
-#: vevida-optimizer.php:151
+#: vevida-optimizer.php:144
 msgid "Update to new minor version"
 msgstr ""
 
-#: vevida-optimizer.php:157
+#: vevida-optimizer.php:150
 msgid "e.g. WordPress 4.1 to 4.1.1"
 msgstr ""
 
-#: vevida-optimizer.php:162
+#: vevida-optimizer.php:155
 msgid "Update themes"
 msgstr ""
 
-#: vevida-optimizer.php:173
+#: vevida-optimizer.php:166
 msgid "Update Translations"
 msgstr ""
 
-#: vevida-optimizer.php:186
+#: vevida-optimizer.php:179
 msgid "Enable or disable plugin updates"
 msgstr ""
 
-#: vevida-optimizer.php:211
+#: vevida-optimizer.php:203
 msgid "Send email notifications"
 msgstr ""
 
-#: vevida-optimizer.php:217
+#: vevida-optimizer.php:209
 msgid "Enable notifications"
 msgstr ""
 
-#: vevida-optimizer.php:232
+#: vevida-optimizer.php:224
 msgid ""
 "All updates are enabled by default. Only change this if your website "
 "experiences issues after an automatic update. In that case, resolve the "
@@ -97,14 +166,14 @@ msgid ""
 "updates."
 msgstr ""
 
-#: vevida-optimizer.php:235
+#: vevida-optimizer.php:227
 msgid ""
 "Some plugins require a different update method. Or the plugin simpy breaks "
 "as a result of the update. In that case automatic updates for the plugin can "
 "be (temporarily) disabled."
 msgstr ""
 
-#: vevida-optimizer.php:250
+#: vevida-optimizer.php:242
 msgid "Settings"
 msgstr ""
 

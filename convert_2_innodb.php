@@ -9,12 +9,25 @@ if ( ! function_exists( 'add_action' ) ) {
 function convert_db_tables() {
     ?>
         <div class="wrap">
-            <h2>Convert MySQL MyISAM tables to InnoDB</h2>
-            <p>This plugin will convert your old MyISAM MySQL database tables to the InnoDB storage engine.</p>
-            <p>In the earlier days of MySQL, the default storage engine for your database was MyISAM. This is why you still encounter a lot of examples with <code>engine=MyISAM</code> online. Nowadays, the InnoDB storage engine is MySQL's default. MyISAM is no longer actively developed, InnoDB is. Therefor, most <a href="http://www.saotn.org/mysql-55-innodb-performance-improvement/" title="MySQL 5.5 InnoDB performance improvement" target="_blank">MySQL performance optimizations</a> are for the InnoDB engine and it's wise to choose this as your table storage engine.</p>
-            <p>Please note, the performance gain depends on your web hosting company's MySQL server configuration. Contact your hosting provider for more information about the specific MySQL (InnoDB storage engine) set up. If you want to know more about this converting process, see my blog post on how to <a href="http://www.saotn.org/convert-mysql-myisam-tables-innodb/" title="convert MySQL MyISAM tables to InnoDB" target="_blank">convert MySQL MyISAM tables to InnoDB</a>, and how to <a href="http://www.saotn.org/optimize-all-mysql-tables-with-mysqli-multi_query/" title="Optimize all MySQL tables with MySQLi multi_query" target="_blank">optimize all MySQL tables with MySQLi multi_query</a>.</p>
-            <p>The plugin tries to be as gentle as possible, however, you use this plugin at your own risk!</p>
-            <p>As a bonus, the plugin optimizes the WordPress <code>wp_options</code> table with an index on the autoload column too. More on that <a href="http://www.saotn.org/wordpress-wp-options-table-autoload-micro-optimization/" title="WordPress wp_options table autoload micro-optimization" target="_blank">here</a>.</p>
+            <h2><?php _e( 'Convert MySQL MyISAM tables to InnoDB', 'vevida-optimizer' ); ?></h2>
+            <p><?php _e( 'This plugin will convert your old MyISAM MySQL database tables to the InnoDB storage engine.','vevida-optimizer' )?></p>
+            <p><?php _e( 'In the earlier days of MySQL, the default storage engine for your database was MyISAM. This is why you still encounter a lot of examples with <code>engine=MyISAM</code> online. Nowadays, the InnoDB storage engine is MySQL\'s default. MyISAM is no longer actively developed, InnoDB is. Therefore, most ', 'vevida-optimizer' ); ?>
+            <a href="http://www.saotn.org/mysql-55-innodb-performance-improvement/" title="MySQL 5.5 InnoDB performance improvement" target="_blank">
+            <?php _e( 'MySQL performance optimizations', 'vevida-optimizer' ); ?>
+            </a> 
+            <?php _e( 'are for the InnoDB engine and it\'s wise to choose this as your table storage engine.', 'vevida-optimizer' ); ?></p>
+            <p><?php _e( 'Please note, the performance gain depends on your web hosting company\'s MySQL server configuration. Contact your hosting provider for more information about the specific MySQL (InnoDB storage engine) set up. If you want to know more about this conversion process, see my blog post on how to', 'vevida-optimizer' ); ?> 
+            <a href="http://www.saotn.org/convert-mysql-myisam-tables-innodb/" title="convert MySQL MyISAM tables to InnoDB" target="_blank">
+            <?php _e( 'convert MySQL MyISAM tables to InnoDB', 'vevida-optimizer' ); ?>
+            </a>, <?php _e( 'and how to', 'vevida-optimizer' ); ?>
+            <a href="http://www.saotn.org/optimize-all-mysql-tables-with-mysqli-multi_query/" title="Optimize all MySQL tables with MySQLi multi_query" target="_blank">
+            <?php _e( 'optimize all MySQL tables with MySQLi multi_query', 'vevida-optimizer' ); ?>
+            </a>.</p>
+            <p><?php _e( 'The plugin tries to be as gentle as possible, however, you use this plugin at your own risk!', 'vevida-optimizer' ); ?></p>
+            <p><?php _e( 'As a bonus, the plugin optimizes the WordPress <code>wp_options</code> table with an index on the autoload column too. More on that', 'vevida-optimizer' ); ?>
+            <a href="http://www.saotn.org/wordpress-wp-options-table-autoload-micro-optimization/" title="WordPress wp_options table autoload micro-optimization" target="_blank">
+            <?php _e( 'here', 'vevida-optimizer' ); ?>
+            </a>.</p>
             <p>&nbsp;</p>
             <script type="text/javascript" >
             jQuery(document).ready(function($) {
@@ -31,7 +44,7 @@ function convert_db_tables() {
                 });
             });
             </script>
-            <input type="button" id="vevida_optimizer_convert" class="button button-primary" value="Convert my MySQL tables" />
+            <input type="button" id="vevida_optimizer_convert" class="button button-primary" value="<?php _e( 'Convert my MySQL tables', 'vevida-optimizer' ); ?>" />
             <div id="vevida-optimizer-message"></div>
         </div>
     <?php

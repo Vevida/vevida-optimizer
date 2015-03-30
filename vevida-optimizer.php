@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vevida Optimizer
  * Description: Configure automatic updates for each WordPress component, and optimize the mySQL database tables.
- * Version: 1.0.8
+ * Version: 1.0.9
  * Author: Jan Vlastuin, Jan Reilink
  * Author URI: vevida.hosting
  * License: GPLv2
@@ -70,14 +70,7 @@ function vevida_optimizer_init_plugin() {
 }
 add_action( 'admin_init', 'vevida_optimizer_init_plugin' );
 
-function vevida_optimizer_send_update_mail() {
-    wp_mail( get_option( 'admin_email' ), 
-            "Your website was automatically updated", 
-            '' );
-} 
 if ( get_option( 'vevida_optimizer_send_email') ) {
-    add_action( 'automatic_updates_complete', 'vevida_optimizer_send_update_mail');
-//    add_action( 'admin_init', 'vevida_optimizer_send_update_mail' );
     add_filter( 'automatic_updates_send_debug_email', '__return_true' );
 }
 
@@ -190,7 +183,6 @@ function vevida_optimizer_settings_init() {
         
         $loaded_plugins = get_plugins();
         foreach ($loaded_plugins as $key => $val) {
-//            add_option( 'vevida_optimizer_plugin_'.$key, true );
             $plugin_slug = explode( '/', $key )[0];
             add_settings_field(
             'vevida_optimizer_plugin_'.$plugin_slug,
