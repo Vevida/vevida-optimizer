@@ -96,7 +96,7 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 == Changelog ==
 
 = 1.0.9 =
-Release date:
+Release date: April 1st 2015
 
 * Fixed comments and code standard
 * More language strings added to conversion function
