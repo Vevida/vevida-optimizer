@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Vevida Optimizer 0.2\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/vevida-optimizer\n"
-"POT-Creation-Date: 2015-03-30 22:12:07+00:00\n"
-"PO-Revision-Date: 2015-03-31 00:13+0100\n"
+"POT-Creation-Date: 2015-04-10 15:46:38+00:00\n"
+"PO-Revision-Date: 2015-04-10 17:48+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -203,7 +203,21 @@ msgstr ""
 "plugin gaat simpelweg stuk als gevolg van de update. In dat geval kan het "
 "automatisch bijwerken van die plugin (tijdelijk) worden uitgeschakeld."
 
-#: vevida-optimizer.php:242
+#: vevida-optimizer.php:230
+msgid ""
+"An email can be sent after each automatic update to notify the site admin ("
+msgstr ""
+"De plugin kan na elke automatische update een email sturen aan de beheerder ("
+
+#: vevida-optimizer.php:232
+msgid ""
+") of the update. This can be useful in troubleshooting the site after an "
+"automatic update."
+msgstr ""
+") met de details van de update. Dit kan handig zijn om eventuele problemen in "
+"de site na een update op te lossen."
+
+#: vevida-optimizer.php:244
 msgid "Settings"
 msgstr "Instellingen"
 

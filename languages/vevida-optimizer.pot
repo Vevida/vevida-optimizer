@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Vevida Optimizer package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Vevida Optimizer 1.0.9\n"
+"Project-Id-Version: Vevida Optimizer 1.0.10\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/vevida-optimizer\n"
-"POT-Creation-Date: 2015-03-30 22:12:07+00:00\n"
+"POT-Creation-Date: 2015-04-10 15:46:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -173,7 +173,18 @@ msgid ""
 "be (temporarily) disabled."
 msgstr ""
 
-#: vevida-optimizer.php:242
+#: vevida-optimizer.php:230
+msgid ""
+"An email can be sent after each automatic update to notify the site admin ("
+msgstr ""
+
+#: vevida-optimizer.php:232
+msgid ""
+") of the update. This can be useful in troubleshooting the site after an "
+"automatic update."
+msgstr ""
+
+#: vevida-optimizer.php:244
 msgid "Settings"
 msgstr ""
 

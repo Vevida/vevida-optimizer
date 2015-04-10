@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vevida Optimizer
  * Description: Configure automatic updates for each WordPress component, and optimize the mySQL database tables.
- * Version: 1.0.9
+ * Version: 1.0.10
  * Author: Jan Vlastuin, Jan Reilink
  * Author URI: vevida.hosting
  * License: GPLv2
@@ -221,13 +221,15 @@ add_action( 'admin_init', 'vevida_optimizer_settings_init' );
  
 /** Format Callbacks **/
 function vevida_optimizer_settings_section_1_callback() {
-    echo( __( 'All updates are enabled by default. Only change this if your website experiences issues after an automatic update. In that case, resolve the issue that blocks the automatic update process, and reenable automatic updates.', 'vevida-optimizer' ) );
+    _e( 'All updates are enabled by default. Only change this if your website experiences issues after an automatic update. In that case, resolve the issue that blocks the automatic update process, and reenable automatic updates.', 'vevida-optimizer' );
 }
 function vevida_optimizer_settings_section_2_callback() {
-    echo( __( 'Some plugins require a different update method. Or the plugin simpy breaks as a result of the update. In that case automatic updates for the plugin can be (temporarily) disabled.', 'vevida-optimizer' ) );
+    _e( 'Some plugins require a different update method. Or the plugin simpy breaks as a result of the update. In that case automatic updates for the plugin can be (temporarily) disabled.', 'vevida-optimizer' );
 }
 function vevida_optimizer_settings_section_3_callback() {
-    echo( __( 'An email can be sent after each automatic update to notify the site admin ('.get_option( 'admin_email' ).') of the update. This can be useful in troubleshooting the site after an automatic update.', 'vevida-optimizer' ) );
+    _e( 'An email can be sent after each automatic update to notify the site admin (', 'vevida-optimizer' );
+    echo get_option( 'admin_email' );
+    _e( ') of the update. This can be useful in troubleshooting the site after an automatic update.', 'vevida-optimizer' );
 }
 function vevida_optimizer_checkbox_callback( $args ) {
     $option = get_option( $args[0] );
