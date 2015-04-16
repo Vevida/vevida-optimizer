@@ -96,9 +96,10 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 == Changelog ==
 
 = 1.0.10 =
-Release date: 
+Release date: April 16th 2015
 
-* Language fix in settings page
+* Language update
+* fix: Proper register setting for email notifications 
 
 = 1.0.9 =
 Release date: April 1st 2015
