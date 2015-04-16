@@ -214,7 +214,7 @@ function vevida_optimizer_settings_init() {
 			'vevida_optimizer_send_email', 
 			'' )
 	);
-	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_translations_updates' );
+	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_send_email' );
         
 }
 add_action( 'admin_init', 'vevida_optimizer_settings_init' );
