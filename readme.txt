@@ -96,7 +96,7 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 == Changelog ==
 
 = 1.0.11 =
-Release date:
+Release date: April 20th 2015
 
 * Updates in plugin details
 * fix: Error when activating plugin if get_plugins returns uncommon plugin names
