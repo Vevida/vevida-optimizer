@@ -191,14 +191,14 @@ function vevida_optimizer_settings_init() {
             if ( is_array( $plugin_array ) ) {
                 $plugin_slug = $plugin_array[0];
                 add_settings_field(
-                'vevida_optimizer_plugin_'.$plugin_slug,
-                $val['Name'],
-                'vevida_optimizer_checkbox_callback',
-                'vevida_optimizer_settings',
-                'vevida_optimizer_settings_section_2',
-                array (	
-                        'vevida_optimizer_plugin_'.$plugin_slug, 
-                        '' )
+                    'vevida_optimizer_plugin_'.$plugin_slug,
+                    $val['Name'],
+                    'vevida_optimizer_checkbox_callback',
+                    'vevida_optimizer_settings',
+                    'vevida_optimizer_settings_section_2',
+                    array (	
+                            'vevida_optimizer_plugin_'.$plugin_slug, 
+                            '' )
                 );
                 register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_plugin_'.$plugin_slug );      
             }
