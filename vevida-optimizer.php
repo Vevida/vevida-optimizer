@@ -3,7 +3,7 @@
  * Plugin Name: Vevida Optimizer
  * Plugin URI: https://wordpress.org/plugins/vevida-optimizer/
  * Description: Configure automatic updates for each WordPress component, and optimize the mySQL database tables.
- * Version: 1.0.12
+ * Version: 1.0.13
  * Author: Jan Vlastuin, Jan Reilink
  * Author URI: http://vevida.hosting
  * License: GPLv2
@@ -187,18 +187,21 @@ function vevida_optimizer_settings_init() {
         
         $loaded_plugins = get_plugins();
         foreach ($loaded_plugins as $key => $val) {
-            $plugin_slug = explode( '/', $key )[0];
-            add_settings_field(
-            'vevida_optimizer_plugin_'.$plugin_slug,
-            $val['Name'],
-            'vevida_optimizer_checkbox_callback',
-            'vevida_optimizer_settings',
-            'vevida_optimizer_settings_section_2',
-            array (	
-                    'vevida_optimizer_plugin_'.$plugin_slug, 
-                    '' )
-            );
-            register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_plugin_'.$plugin_slug );
+            $plugin_array = explode( '/', $key );
+            if ( is_array( $plugin_array ) ) {
+                $plugin_slug = $plugin_array[0];
+                add_settings_field(
+                'vevida_optimizer_plugin_'.$plugin_slug,
+                $val['Name'],
+                'vevida_optimizer_checkbox_callback',
+                'vevida_optimizer_settings',
+                'vevida_optimizer_settings_section_2',
+                array (	
+                        'vevida_optimizer_plugin_'.$plugin_slug, 
+                        '' )
+                );
+                register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_plugin_'.$plugin_slug );      
+            }
         }
         
 	/** Setting section 3, enable emails after update. **/
