@@ -96,7 +96,9 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 == Changelog ==
 
 = 1.0.13 =
-Release date:
+Release date: April 21th 2015
+
+fix: activation bug fixed when used on PHP 5.3
 
 = 1.0.12 =
 Release date: April 21th 2015
