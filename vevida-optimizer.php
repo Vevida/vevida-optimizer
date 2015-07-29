@@ -3,7 +3,7 @@
  * Plugin Name: Vevida Optimizer
  * Plugin URI: https://wordpress.org/plugins/vevida-optimizer/
  * Description: Configure automatic updates for each WordPress component, and optimize the mySQL database tables.
- * Version: 1.0.13
+ * Version: 1.1.0
  * Author: Jan Vlastuin, Jan Reilink
  * Author URI: http://vevida.hosting
  * License: GPLv2
@@ -42,7 +42,30 @@ function vevida_optimizer_allow_minor_core( $update ) {
 add_filter( 'allow_major_auto_core_updates', 'vevida_optimizer_allow_minor_core' );
 
 function vevida_optimizer_allow_plugin( $update, $item ) {
-    return get_option( 'vevida_optimizer_plugin_'.$item->slug );
+    $pluginslug = $item->slug;
+    $update = 'vevida_optimizer_plugin_'.$pluginslug;
+    $delay = 'vevida_optimizer_plugin_'.$pluginslug.'_delay';
+    $timestamp = get_option( 'vevida_optimizer_plugin_'.$pluginslug.'_timestamp' );
+    
+    if ( $update ) { 
+        if ( $delay ) {
+            if ( !$timestamp ) {
+                add_option( 'vevida_optimizer_plugin_'.$pluginslug.'_timestamp', time() );
+                $to = array( get_option( 'admin_email' ) );
+                $subject = "Update the plugin ".$pluginslug;
+                $content = "Plugin ".$$pluginslug." needs to be updated. Please login "
+                        . "to update the plugin now, or it will be updated "
+                        . "in 12 hours according to your settings";
+                wp_mail($to, $subject, $content);
+            } elseif ( time - $timestamp > 43200 ) {
+                delete_option( 'vevida_optimizer_plugin_'.$pluginslug.'_timestamp' );
+                return true;
+            }
+        } else {
+            return true;
+        }
+    }
+    return false;
 }
 add_filter( 'auto_update_plugin', 'vevida_optimizer_allow_plugin', 10, 2 );
 
@@ -69,6 +92,7 @@ function vevida_optimizer_init_plugin() {
         if ( is_array( $plugin_array ) ) {
             $plugin_slug = $plugin_array[0];
             add_option( 'vevida_optimizer_plugin_'.$plugin_slug, true );
+            add_option( 'vevida_optimizer_plugin_'.$plugin_slug.'_delay', true );
         }
     }
 }

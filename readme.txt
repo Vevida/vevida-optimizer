@@ -2,8 +2,8 @@
 Contributors: vlastuin, janr
 Tags: auto-update, updates, mysql optimization, update, automatic update, vevida, hosting
 Requires at least: 3.9
-Tested up to: 4.2
-Stable tag: 1.0.13
+Tested up to: 4.3
+Stable tag: 1.1.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,14 @@ provider to bugs and other attack vectors that can enable an attacker to hack
 into your website. Keeping your WordPress website up-to-date is one of the key 
 ingredients to keeping your website secure.
 
+= What if an update breaks my WordPress website? =
+
+The plugin will send you an email after every automatic update with the details 
+of the update. Use this to identify the update that caused the website to fail, 
+and remove it from your website. Or restore a backup of the website, and disable
+automatic updates for the part that caused the website to fail. Investigate the
+problem and -if possible- restore automatic updates.
+
 = Why has this or that plugin not been updated yet? =
 
 First check whether automatic updates are enabled for the plugin in 'Dashboard' 
@@ -95,10 +103,15 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 
 == Changelog ==
 
+= 1.1.0 =
+Release date:
+
+* new: Notify site owner of new plugin updates without updating immediately.
+
 = 1.0.13 =
 Release date: April 21th 2015
 
-fix: activation bug fixed when used on PHP 5.3
+* fix: activation bug fixed when used on PHP 5.3
 
 = 1.0.12 =
 Release date: April 21th 2015
