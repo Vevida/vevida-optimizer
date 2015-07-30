@@ -43,8 +43,8 @@ add_filter( 'allow_major_auto_core_updates', 'vevida_optimizer_allow_minor_core'
 
 function vevida_optimizer_allow_plugin( $update, $item ) {
     $pluginslug = $item->slug;
-    $update = 'vevida_optimizer_plugin_'.$pluginslug;
-    $delay = 'vevida_optimizer_plugin_'.$pluginslug.'_delay';
+    $update = get_option( 'vevida_optimizer_plugin_'.$pluginslug );
+    $delay = get_option( 'vevida_optimizer_plugin_'.$pluginslug.'_delay' );
     $timestamp = get_option( 'vevida_optimizer_plugin_'.$pluginslug.'_timestamp' );
     
     if ( $update ) { 
