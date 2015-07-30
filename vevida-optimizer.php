@@ -51,13 +51,13 @@ function vevida_optimizer_allow_plugin( $update, $item ) {
         if ( $delay ) {
             if ( !$timestamp ) {
                 add_option( 'vevida_optimizer_plugin_'.$pluginslug.'_timestamp', time() );
-                $to = array( get_option( 'admin_email' ) );
+                $to = get_option( 'admin_email' );
                 $subject = "Update the plugin ".$pluginslug;
-                $content = "Plugin ".$$pluginslug." needs to be updated. Please login "
-                        . "to update the plugin now, or it will be updated "
-                        . "in 12 hours according to your settings";
+                $content = "Concerning WordPress site: ".get_site_url()."\n"
+                        . "The plugin ".$pluginslug." needs to be updated.\n "
+                        . "Please login to update the plugin now, or it will be updated automatically in 12 hours";
                 wp_mail($to, $subject, $content);
-            } elseif ( time - $timestamp > 43200 ) {
+            } elseif ( time - $timestamp > 40000 ) {
                 delete_option( 'vevida_optimizer_plugin_'.$pluginslug.'_timestamp' );
                 return true;
             }
