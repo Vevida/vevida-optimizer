@@ -48,22 +48,17 @@ function vevida_optimizer_allow_plugin( $update, $item ) {
     $timestamp = get_option( 'vevida_optimizer_plugin_'.$pluginslug.'_timestamp' );
     
     if ( $update ) { 
-        if ( $delay ) {
-            if ( !( $timestamp > 0 ) ) {
-                add_option( 'vevida_optimizer_plugin_'.$pluginslug.'_timestamp', time() );
-                $to = get_option( 'admin_email' );
-                $subject = "Update available for plugin ".$pluginslug;
-                $content = "Concerning WordPress site: ".get_site_url()."\n"
-                        . "The plugin ".$pluginslug." needs to be updated.\n "
-                        . "Please login to update the plugin now, or it will be updated automatically in 12 hours";
-                wp_mail($to, $subject, $content);
-            } elseif ( time - $timestamp > 40000 ) {
-                delete_option( 'vevida_optimizer_plugin_'.$pluginslug.'_timestamp' );
-                return true;
-            }
-        } else {
-            return true;
-        }
+        if ( $delay && !timestamp ) {
+            add_option( 'vevida_optimizer_plugin_'.$pluginslug.'_timestamp', time() );
+            $to = get_option( 'admin_email' );
+            $subject = "Update available for plugin ".$pluginslug;
+            $content = "Concerning WordPress site: ".get_site_url()."\n"
+                    . "The plugin ".$pluginslug." needs to be updated.\n"
+                    . "Please login to update the plugin now, or it will be updated automatically in 12 hours";
+            wp_mail($to, $subject, $content);
+            return false;
+        } 
+        return true;
     }
     return false;
 }
