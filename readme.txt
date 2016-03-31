@@ -110,7 +110,7 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 = 1.0.15 =
 Release date: January 11th 2016
 
-* Tested with Wordpress 4.4
+* Tested with WordPress 4.4
 
 = 1.0.14 =
 Release date: August 9th 2015
