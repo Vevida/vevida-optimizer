@@ -3,7 +3,7 @@
  * Plugin Name: Vevida Optimizer
  * Plugin URI: https://wordpress.org/plugins/vevida-optimizer/
  * Description: Configure automatic updates for each WordPress component, and optimize the mySQL database tables.
- * Version: 1.1.0
+ * Version: 1.0.15
  * Author: Jan Vlastuin, Jan Reilink
  * Author URI: http://vevida.hosting
  * License: GPLv2
@@ -42,25 +42,7 @@ function vevida_optimizer_allow_minor_core( $update ) {
 add_filter( 'allow_major_auto_core_updates', 'vevida_optimizer_allow_minor_core' );
 
 function vevida_optimizer_allow_plugin( $update, $item ) {
-    $pluginslug = $item->slug;
-    $update = get_option( 'vevida_optimizer_plugin_'.$pluginslug );
-    $delay = get_option( 'vevida_optimizer_plugin_'.$pluginslug.'_delay' );
-    $timestamp = get_option( 'vevida_optimizer_plugin_'.$pluginslug.'_timestamp' );
-    
-    if ( $update ) { 
-        if ( $delay && !timestamp ) {
-            add_option( 'vevida_optimizer_plugin_'.$pluginslug.'_timestamp', time() );
-            $to = get_option( 'admin_email' );
-            $subject = "Update available for plugin ".$pluginslug;
-            $content = "Concerning WordPress site: ".get_site_url()."\n"
-                    . "The plugin ".$pluginslug." needs to be updated.\n"
-                    . "Please login to update the plugin now, or it will be updated automatically in 12 hours";
-            wp_mail($to, $subject, $content);
-            return false;
-        } 
-        return true;
-    }
-    return false;
+    return get_option( 'vevida_optimizer_plugin_'.$item->slug );
 }
 add_filter( 'auto_update_plugin', 'vevida_optimizer_allow_plugin', 10, 2 );
 
@@ -87,7 +69,6 @@ function vevida_optimizer_init_plugin() {
         if ( is_array( $plugin_array ) ) {
             $plugin_slug = $plugin_array[0];
             add_option( 'vevida_optimizer_plugin_'.$plugin_slug, true );
-            add_option( 'vevida_optimizer_plugin_'.$plugin_slug.'_delay', true );
         }
     }
 }
