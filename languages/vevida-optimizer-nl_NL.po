@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Vevida Optimizer 1.0.14\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/vevida-optimizer\n"
-"POT-Creation-Date: 2016-04-03 14:15+0200\n"
-"PO-Revision-Date: 2016-04-03 14:19+0200\n"
+"POT-Creation-Date: 2016-04-03 14:38+0200\n"
+"PO-Revision-Date: 2016-04-03 14:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -127,34 +127,51 @@ msgstr "Optimaliseer MySQL tabellen"
 
 #: plugins/optimize.php:14
 msgid ""
-"Keeping your WordPress database optimized is <em>a must</em> for a fast "
-"performing WordPress website. We at "
+"Keeping your WordPress database optimized is <em>a must</em> for a well "
+"performing WordPress website. Your plugin authors over at "
 msgstr ""
+"Een goed presterende WordPress website kan niet zonder een optimaal werkende "
+"WordPress database. Om die reden hebben wij, als plugin auteurs bij "
 
 #: plugins/optimize.php:16
 msgid "Vevida"
-msgstr ""
+msgstr "Vevida"
 
 #: plugins/optimize.php:18
-msgid "care about your site's performance."
+msgid "care about your site performance."
 msgstr ""
+"een nieuwe functie geïntroduceerd die een Wordpress site sneller maakt."
 
 #: plugins/optimize.php:19
 msgid ""
 "Every WordPress post, draft, revision and comment adds data to your MySQL "
 "database, and removing revisions, drafts and comments creates empty space "
-"between data. This makes your database huger and fragmented. Defragmenting "
-"the data puts all data back in order, removing empty spaces and results in a "
-"smaller database. The defragmented database performs faster because MySQL "
-"will be able locate information much faster. "
+"between data. This makes your database bigger and more fragmented. "
+"Defragmenting the data puts all data back in order and removes empty space. "
+"This results in a smaller database. The defragmented database performs "
+"faster because MySQL will be able to locate information much faster. "
 msgstr ""
+"Elk WordPress bericht, revisie of reactie voegt data toe aan de MySQL "
+"database waarop je website draait. Het verwijderen van berichten, reacties "
+"en drafts creëert lege ruimte tussen de data-elementen die achterblijven. "
+"Hierdoor blijft je database groeien en wordt de data meer en meer "
+"gefragmenteerd.\n"
+"\n"
+"Het defragmenteren van je database tabellen leidt tot een kleinere database "
+"omdat alle lege ruimte wordt verwijderd en alle data weer in een logische "
+"volgorde wordt geplaatst. De gedefragmenteerde database performt beter en "
+"sneller omdat MySQL de informatie nu veel sneller kan vinden."
 
 #: plugins/optimize.php:20
 msgid ""
 "Pressing the button below performs an MySQL optimization by executing an "
 "<code>OPTIMIZE TABLE</code> statement on all WordPress MySQL tables. All "
-"other, non-WordPress, tables remain untouched."
+"other, non-WordPress tables remain untouched."
 msgstr ""
+"Als je op de onderstaande knop klikt, zal de Vevida Optimizer je MySQL "
+"tabellen optimaliseren door het uitvoeren van een <code>OPTIMIZE TABLE</"
+"code> statement op alle Wordpress tabellen in je database. Eventuele andere, "
+"niet-WordPress tabellen  in je database worden niet aangeraakt."
 
 #: plugins/optimize.php:38 vevida-optimizer.php:115
 msgid "Optimize MySQL database tables"
@@ -164,6 +181,8 @@ msgstr "Optimaliseer MySQL tabellen"
 msgid ""
 "Turns out DB optimization went wrong... Please check your PHP error log file."
 msgstr ""
+"Hmm, blijkbaar ging er iets mis bij de optimalisatie. Kijk eens in je PHP "
+"error logbestand (of bel de Vevida WordPress experts op +31502110100.)"
 
 #: plugins/optimize.php:56
 msgid "MySQL database optimization successful!"
@@ -205,16 +224,16 @@ msgid "Update to new major version"
 msgstr "Bijwerken van major versie updates"
 
 #: vevida-optimizer.php:161
-msgid "e.g. WordPress 4.1 to 4.2"
-msgstr "Bijvoorbeeld: van Wordpress versie 4.1 naar 4.2"
+msgid "e.g. WordPress 4.4 to 4.5"
+msgstr "bijvoorbeeld Wordpress 4.4 naar 4.5"
 
 #: vevida-optimizer.php:166
 msgid "Update to new minor version"
 msgstr "Bijwerken van minor versie updates"
 
 #: vevida-optimizer.php:172
-msgid "e.g. WordPress 4.1 to 4.1.1"
-msgstr "Bijvoorbeeld: van Wordpress versie 4.1 naar 4.1.1"
+msgid "e.g. WordPress 4.4.1 to 4.4.2"
+msgstr "bijvoorbeeld Wordpress 4.4.1 naar 4.4.2"
 
 #: vevida-optimizer.php:177
 msgid "Update themes"
@@ -298,6 +317,12 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://vevida.hosting"
 msgstr ""
+
+#~ msgid "e.g. WordPress 4.1 to 4.2"
+#~ msgstr "Bijvoorbeeld: van Wordpress versie 4.1 naar 4.2"
+
+#~ msgid "e.g. WordPress 4.1 to 4.1.1"
+#~ msgstr "Bijvoorbeeld: van Wordpress versie 4.1 naar 4.1.1"
 
 #~ msgid "Convert DB tables"
 #~ msgstr "Converteer DB tabellen"

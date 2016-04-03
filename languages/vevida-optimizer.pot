@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Vevida Optimizer 1.0.16\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/vevida-optimizer\n"
-"POT-Creation-Date: 2016-04-03 12:14:19+00:00\n"
+"POT-Creation-Date: 2016-04-03 12:38:13+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -105,8 +105,8 @@ msgstr ""
 
 #: plugins/optimize.php:14
 msgid ""
-"Keeping your WordPress database optimized is <em>a must</em> for a fast "
-"performing WordPress website. We at "
+"Keeping your WordPress database optimized is <em>a must</em> for a well "
+"performing WordPress website. Your plugin authors over at "
 msgstr ""
 
 #: plugins/optimize.php:16
@@ -114,24 +114,24 @@ msgid "Vevida"
 msgstr ""
 
 #: plugins/optimize.php:18
-msgid "care about your site's performance."
+msgid "care about your site performance."
 msgstr ""
 
 #: plugins/optimize.php:19
 msgid ""
 "Every WordPress post, draft, revision and comment adds data to your MySQL "
 "database, and removing revisions, drafts and comments creates empty space "
-"between data. This makes your database huger and fragmented. Defragmenting "
-"the data puts all data back in order, removing empty spaces and results in a "
-"smaller database. The defragmented database performs faster because MySQL "
-"will be able locate information much faster. "
+"between data. This makes your database bigger and more fragmented. "
+"Defragmenting the data puts all data back in order and removes empty space. "
+"This results in a smaller database. The defragmented database performs "
+"faster because MySQL will be able to locate information much faster. "
 msgstr ""
 
 #: plugins/optimize.php:20
 msgid ""
 "Pressing the button below performs an MySQL optimization by executing an "
 "<code>OPTIMIZE TABLE</code> statement on all WordPress MySQL tables. All "
-"other, non-WordPress, tables remain untouched."
+"other, non-WordPress tables remain untouched."
 msgstr ""
 
 #: plugins/optimize.php:38 vevida-optimizer.php:115
@@ -179,7 +179,7 @@ msgid "Update to new major version"
 msgstr ""
 
 #: vevida-optimizer.php:161
-msgid "e.g. WordPress 4.1 to 4.2"
+msgid "e.g. WordPress 4.4 to 4.5"
 msgstr ""
 
 #: vevida-optimizer.php:166
@@ -187,7 +187,7 @@ msgid "Update to new minor version"
 msgstr ""
 
 #: vevida-optimizer.php:172
-msgid "e.g. WordPress 4.1 to 4.1.1"
+msgid "e.g. WordPress 4.4.1 to 4.4.2"
 msgstr ""
 
 #: vevida-optimizer.php:177

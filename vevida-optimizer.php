@@ -158,7 +158,7 @@ function vevida_optimizer_settings_init() {
 		'vevida_optimizer_settings_section_1',
 		array (	
 			'vevida_optimizer_core_major_updates', 
-			__( 'e.g. WordPress 4.1 to 4.2', 'vevida-optimizer' ) )
+			__( 'e.g. WordPress 4.4 to 4.5', 'vevida-optimizer' ) )
 	);
 	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_core_major_updates' );
 	add_settings_field(
@@ -169,7 +169,7 @@ function vevida_optimizer_settings_init() {
 		'vevida_optimizer_settings_section_1',
 		array (	
 			'vevida_optimizer_core_minor_updates', 
-			__( 'e.g. WordPress 4.1 to 4.1.1', 'vevida-optimizer' )  )
+			__( 'e.g. WordPress 4.4.1 to 4.4.2', 'vevida-optimizer' )  )
 	);
 	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_core_minor_updates' );
 	add_settings_field(
