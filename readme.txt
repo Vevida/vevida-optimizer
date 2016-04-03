@@ -2,8 +2,8 @@
 Contributors: vlastuin, janr
 Tags: auto-update, updates, MySQL optimization, update, automatic update, vevida, hosting
 Requires at least: 3.9
-Tested up to: 4.4.2
-Stable tag: 1.0.15
+Tested up to: 4.5
+Stable tag: 1.0.16
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,9 +107,9 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 == Changelog ==
 
 = 1.0.16 =
-Release date: March 31th 2016
+Release date: @@
 
-* Tested with WordPress 4.4.2
+* Tested with WordPress 4.5
 * New: major overhaul, Vevida Optimizer now supports its own plugins. Drop your 
   extension in the plugins/ directory. You do have to add your own plugin to the
   WordPress Administration Menu in vevida-optimizer.php, see 
