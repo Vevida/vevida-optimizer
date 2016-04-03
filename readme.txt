@@ -1,14 +1,14 @@
 === Plugin Name ===
 Contributors: vlastuin, janr
-Tags: auto-update, updates, mysql optimization, update, automatic update, vevida, hosting
+Tags: auto-update, updates, MySQL optimization, update, automatic update, vevida, hosting
 Requires at least: 3.9
-Tested up to: 4.4.1
+Tested up to: 4.4.2
 Stable tag: 1.0.15
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Easily configure automatic updates from the admin interface and modernize your 
-mySQL database.
+MySQL database.
 
 == License ==
 Released under the terms of the GNU General Public License.
@@ -27,14 +27,13 @@ automatically updated, and the plugin updates can be configured on a per-plugin
 basis. 
 
 Many websites started originally with older versions of 
-WordPress. Previously those installs used older versions of mySQL, when the 
-default table format was myISAM. Nowadays, modern versions of mySQL use the 
-InnoDB format, which 
-is currently enabled by default. Through this plugin the database tables can be 
-optimized for those newer versions of mySQL, converting older myISAM tables to 
-InnoDB. 
+WordPress. Previously those installs used older versions of MySQL, when the 
+default table format was MyISAM. Nowadays, modern versions of MySQL use the 
+InnoDB format, which is currently enabled by default. Through this plugin 
+the database tables can be optimized for those newer versions of MySQL, 
+converting older MyISAM tables to InnoDB. 
 This is required only once, and only when you have been using WordPress for a 
-long time or with a hosting provider that has not actively kept its mySQL 
+long time or with a hosting provider that has not actively kept its MySQL 
 installations up to date.
 
 Vevida is a major webhosting provider based in The Netherlands. We have been 
@@ -48,7 +47,7 @@ repository. The source code is also freely available on GitHub.
 1. Upload the package contents to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Configure automatic updates through 'Dashboard' -> 'Update Settings'
-1. Optimize your mySQL database through 'Tools' -> 'Convert DB tables'
+1. Optimize your MySQL database through 'Tools' -> 'Convert DB tables'
 
 Or login to WordPress. Go to Plugins -> Add New and search for Vevida. The search
 box is located at the top right of the page. Click Install and enjoy 
@@ -86,14 +85,14 @@ hours for a plugin to actually update.
 = How can I optimize my database tables =
 
 Go to Tools -> Convert DB tables. This will launch the utility that converts 
-myISAM tables to InnoDB.
+MyISAM tables to InnoDB.
 
 = Why would I convert my database tables? =
 
-Many older versions of mySQL used myISAM tables by default. Nowadays InnoDB is 
-used by recent versions of mySQL, and this is a much faster format. If you have 
-created your WordPress site in the past on previous versions of mySQL, chances 
-are that you still use myISAM.
+Many older versions of MySQL used MyISAM tables by default. Nowadays InnoDB is 
+used by recent versions of MySQL, and this is a much faster format. If you have 
+created your WordPress site in the past on previous versions of MySQL, chances 
+are that you still use MyISAM.
 
 = Can I use this plugin on hosting platforms other than at vevida.com? =
 
@@ -106,6 +105,20 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 1. The submenu under 'Dashboard' that allows the configuration of automatic updates.
 
 == Changelog ==
+
+= 1.0.16 =
+Release date: March 31th 2016
+
+* Tested with WordPress 4.4.2
+* New: major overhaul, Vevida Optimizer now supports its own plugins. Drop your 
+  extension in the plugins/ directory. You do have to add your own plugin to the
+  WordPress Administration Menu in vevida-optimizer.php, see 
+  https://codex.wordpress.org/Administration_Menus
+* New: plugins/optimize.php, to perform a manual OPTIMIZE TABLE statement on 
+  WordPress database tables.
+* Fix: renamed convert_2_innodb.php to convert.php and moved to plugins/.
+* Fix: renamed functions to a more standard form.
+* Fix: language updates.
 
 = 1.0.15 =
 Release date: January 11th 2016

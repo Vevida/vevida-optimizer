@@ -6,7 +6,7 @@ if ( ! function_exists( 'add_action' ) ) {
 	exit;
 }
 
-function convert_db_tables() {
+function vevida_convert_db_tables() {
     ?>
         <div class="wrap">
             <h2><?php _e( 'Convert MySQL MyISAM tables to InnoDB', 'vevida-optimizer' ); ?></h2>
@@ -34,26 +34,27 @@ function convert_db_tables() {
                 $(document).on('click', '#vevida_optimizer_convert', function(e) {
                     e.preventDefault();         
                     var data = {
-                            'action': 'vevida-optimizer-convertMyisamToInnodb',
+                            'action': 'vevida-optimizer-convert-myisam-innodb',
                             '_ajax_nonce': '<?php echo wp_create_nonce( 'vevida-optimizer-nonce' ); ?>'
                     };
 
                     $.post( ajaxurl, data, function( response ) {
-                        document.getElementById('vevida-optimizer-message').innerHTML = response;
+                        document.getElementById('vevida-optimizer-convert').innerHTML = response;
                     });
                 });
             });
             </script>
             <input type="button" id="vevida_optimizer_convert" class="button button-primary" value="<?php _e( 'Convert my MySQL tables', 'vevida-optimizer' ); ?>" />
-            <div id="vevida-optimizer-message"></div>
+            <div id="vevida-optimizer-convert"></div>
         </div>
     <?php
 }
 
-add_action( 'wp_ajax_vevida-optimizer-convertMyisamToInnodb', 'vevida_optimizer_convertMyisamToInnodb' );
-function vevida_optimizer_convertMyisamToInnodb() {
+add_action( 'wp_ajax_vevida-optimizer-convert-myisam-innodb', 'vevida_optimizer_convert_myisam_innodb' );
+
+function vevida_optimizer_convert_myisam_innodb() {
     check_ajax_referer( 'vevida-optimizer-nonce' );
-    if ( !convertTables() ) {
+    if ( !vevida_convert_tables() ) {
         echo '<h2>';
         _e( 'Whoops, error!', 'vevida-optimizer' );
         echo '</h2><p>';
@@ -69,9 +70,9 @@ function vevida_optimizer_convertMyisamToInnodb() {
     wp_die();
 }
 
-function convertTables() {
+function vevida_convert_tables() {
     global $wpdb;
-    foreach ( $wpdb->get_results("SELECT table_name FROM information_schema.tables WHERE ENGINE = 'MyISAM' AND  table_name LIKE '{$wpdb->prefix}%'")  as $key => $row) {
+    foreach ( $wpdb->get_results("SELECT table_name FROM information_schema.tables WHERE ENGINE = 'MyISAM' AND table_name LIKE '{$wpdb->prefix}%'")  as $key => $row) {
         $fulltextIndex = $wpdb->get_results("SELECT
 			table_schema,
 			table_name
