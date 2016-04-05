@@ -3,7 +3,7 @@
  * Plugin Name: Vevida Optimizer
  * Plugin URI: https://wordpress.org/plugins/vevida-optimizer/
  * Description: Configure automatic updates for each WordPress component, and optimize the mySQL database tables.
- * Version: 1.0.15
+ * Version: 1.0.16
  * Author: Jan Vlastuin, Jan Reilink
  * Author URI: http://vevida.hosting
  * License: GPLv2
@@ -18,7 +18,19 @@ if ( ! function_exists( 'add_action' ) ) {
 	exit;
 }
 
-include( plugin_dir_path( __FILE__ ) . 'convert_2_innodb.php');
+if( !defined( 'VEVIDAOPTIMIZERHOME' ) )
+	define('VEVIDAOPTIMIZERHOME', dirname(__FILE__).'/');
+
+if( !isset( $vevida_optimizer_plugins_dir ) )
+	$vevida_optimizer_plugins_dir = VEVIDAOPTIMIZERHOME . 'plugins';
+
+$plugins = glob( $vevida_optimizer_plugins_dir . '/*.php' );
+if( is_array( $plugins ) ) {
+	foreach ( $plugins as $plugin ) {
+	if( is_file( $plugin ) )
+		require_once( $plugin );
+	}
+}
 
 /**
  * Load textdomain for vevida optimizer plugin
@@ -93,11 +105,17 @@ function vevida_optimizer_add_admin_pages() {
     );
     /** Add Database Optimisation Page **/
     add_management_page( 
-            'Convert DB tables', 
-            __( 'Convert DB tables', 'vevida-optimizer' ), 
+            'Convert MySQL MyISAM tables to InnoDB', 
+            __( 'Convert MyISAM to InnoDB', 'vevida-optimizer' ), 
             'manage_options', 
-            'vevida-optimizer-convertMyisamToInnodb', 
-            'convert_db_tables' );
+            'vevida-optimizer-convert-myisam-innodb', 
+            'vevida_convert_db_tables' );
+    add_management_page( 
+            'Optimize MySQL database tables', 
+            __( 'Optimize MySQL database tables', 'vevida-optimizer' ), 
+            'manage_options', 
+            'vevida-optimizer-optimize-db', 
+            'vevida_optimize_db_tables' );
 }
 add_action( 'admin_menu', 'vevida_optimizer_add_admin_pages' );
  
@@ -140,7 +158,7 @@ function vevida_optimizer_settings_init() {
 		'vevida_optimizer_settings_section_1',
 		array (	
 			'vevida_optimizer_core_major_updates', 
-			__( 'e.g. WordPress 4.1 to 4.2', 'vevida-optimizer' ) )
+			__( 'e.g. WordPress 4.4 to 4.5', 'vevida-optimizer' ) )
 	);
 	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_core_major_updates' );
 	add_settings_field(
@@ -151,7 +169,7 @@ function vevida_optimizer_settings_init() {
 		'vevida_optimizer_settings_section_1',
 		array (	
 			'vevida_optimizer_core_minor_updates', 
-			__( 'e.g. WordPress 4.1 to 4.1.1', 'vevida-optimizer' )  )
+			__( 'e.g. WordPress 4.4.1 to 4.4.2', 'vevida-optimizer' )  )
 	);
 	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_core_minor_updates' );
 	add_settings_field(
