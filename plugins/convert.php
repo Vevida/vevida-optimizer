@@ -78,7 +78,7 @@ function vevida_convert_tables() {
 			table_name
 			FROM information_schema.statistics
 			WHERE index_type = 'FULLTEXT'
-			AND table_name = ".'{$row}');
+			AND table_name = ".'{$row->table_name}');
 	if ( $fulltextIndex ) {
             continue;
 	}
