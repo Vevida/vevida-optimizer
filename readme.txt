@@ -2,8 +2,8 @@
 Contributors: vlastuin, janr
 Tags: auto-update, updates, MySQL optimization, update, automatic update, vevida, hosting
 Requires at least: 3.9
-Tested up to: 4.5
-Stable tag: 1.1
+Tested up to: 4.5.3
+Stable tag: 1.1.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +105,13 @@ source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 1. The submenu under 'Dashboard' that allows the configuration of automatic updates.
 
 == Changelog ==
+
+= 1.1.1 = 
+Release date: June 26th 2016
+
+* Bug fixed in the InnoDB conversion function where InnoDB tables have a 
+  fulltextindex.
+* Tested with WordPress 4.5.3
 
 = 1.1 =
 Release date: April 7th 2016
