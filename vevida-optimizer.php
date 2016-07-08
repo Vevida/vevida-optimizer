@@ -51,7 +51,7 @@ add_filter( 'allow_major_auto_core_updates', 'vevida_optimizer_allow_major_core'
 function vevida_optimizer_allow_minor_core( $update ) {
     return get_option( 'vevida_optimizer_core_minor_updates' );
 }
-add_filter( 'allow_major_auto_core_updates', 'vevida_optimizer_allow_minor_core' );
+add_filter( 'allow_minor_auto_core_updates', 'vevida_optimizer_allow_minor_core' );
 
 function vevida_optimizer_allow_plugin( $update, $item ) {
     return get_option( 'vevida_optimizer_plugin_'.$item->slug );
