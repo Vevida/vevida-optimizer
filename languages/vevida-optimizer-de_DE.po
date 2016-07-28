@@ -1,0 +1,322 @@
+# Copyright (C) 2016 Vevida Optimizer
+# This file is distributed under the same license as the Vevida Optimizer package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Vevida Optimizer 1.0.16\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/vevida-optimizer\n"
+"POT-Creation-Date: 2016-07-08 17:04+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-07-22 16:25+0200\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.8\n"
+"Last-Translator: Sven Hofmann <info@hofmannsven.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+
+#: plugins/convert.php:12
+msgid "Convert MySQL MyISAM tables to InnoDB"
+msgstr "MySQL MyISAM-Tabellen zu InnoDB konvertieren"
+
+#: plugins/convert.php:13
+msgid ""
+"This plugin will convert your old MyISAM MySQL database tables to the InnoDB "
+"storage engine."
+msgstr ""
+"Das Plugin konvertiert deine alten MyISAM MySQL-Datenbanktabellen in das "
+"InnoDB Speichersubsystem."
+
+#: plugins/convert.php:14
+msgid ""
+"In the earlier days of MySQL, the default storage engine for your database "
+"was MyISAM. This is why you still encounter a lot of examples with "
+"<code>engine=MyISAM</code> online. Nowadays, the InnoDB storage engine is "
+"MySQL's default. MyISAM is no longer actively developed, InnoDB is. "
+"Therefore, most "
+msgstr ""
+"In den frühen Tagen von MySQL war das Standard-Speichersubsystem für deine "
+"Datenbank MyISAM. Darum findest du online immer noch viele Beispiele mit "
+"<code>engine=MyISAM</code>. Heutzutage ist das InnoDB Speichersubsystem der "
+"Standard bei MySQL. MyISAM wird nicht mehr weiterentwickelt, InnoDB dagegen "
+"schon. Deshalb sind viele"
+
+#: plugins/convert.php:16
+msgid "MySQL performance optimizations"
+msgstr "MySQL-Performanceoptimierungen"
+
+#: plugins/convert.php:18
+msgid ""
+"are for the InnoDB engine and it's wise to choose this as your table storage "
+"engine."
+msgstr ""
+"für das InnoDB Speichersubsystem und es ist sinnvoll dies als "
+"Speichersubsystem für deine Tabellen zu wählen."
+
+#: plugins/convert.php:19
+msgid ""
+"Please note, the performance gain depends on your web hosting company's "
+"MySQL server configuration. Contact your hosting provider for more "
+"information about the specific MySQL (InnoDB storage engine) set up. If you "
+"want to know more about this conversion process, see my blog post on how to"
+msgstr ""
+"Bitte beachte, dass der Performancegewinn von der Konfiguration des MySQL-"
+"Servers deines Anbieters abhängig ist. Kontaktiere deinen Anbieter für "
+"weitere Informationen zur spezifischen Konfiguration von MySQL (InnoDB "
+"Speichersubsystem). Wenn du mehr zu dem Konvertierungsprozess wissen "
+"möchtest, schau dir meinen Beitrag an, wie man"
+
+#: plugins/convert.php:21
+msgid "convert MySQL MyISAM tables to InnoDB"
+msgstr "MySQL MyISAM-Tabellen zu InnoDB konvertiert"
+
+#: plugins/convert.php:22
+msgid "and how to"
+msgstr "und wie man"
+
+#: plugins/convert.php:24
+msgid "optimize all MySQL tables with MySQLi multi_query"
+msgstr "alle MySQL-Tabellen mit MySQLi multi_query optimiert"
+
+#: plugins/convert.php:26
+msgid ""
+"The plugin tries to be as gentle as possible, however, you use this plugin "
+"at your own risk!"
+msgstr ""
+"Das Plugin versucht so behutsam wie möglich zu sein, dennoch benutzt du das "
+"Plugin auf eigene Gefahr!"
+
+#: plugins/convert.php:27
+msgid ""
+"As a bonus, the plugin optimizes the WordPress <code>wp_options</code> table "
+"with an index on the autoload column too. More on that"
+msgstr ""
+"Als Bonus optimiert das Plugin auch die WordPress <code>wp_options</code> "
+"Tabelle mit einem Index für die autoload Spalte. Mehr dazu"
+
+#: plugins/convert.php:29
+msgid "here"
+msgstr "hier"
+
+#: plugins/convert.php:47
+msgid "Convert my MySQL tables"
+msgstr "Meine MySQL-Tabellen konvertieren"
+
+#: plugins/convert.php:59 plugins/optimize.php:50
+msgid "Whoops, error!"
+msgstr "Whoops, Fehler!"
+
+#: plugins/convert.php:61
+msgid "Turns out something went wrong... Please check your PHP error log file."
+msgstr ""
+"Es ist etwas schief gegangen… Bitte prüfe deine PHP-Fehlerprotokolldatei."
+
+#: plugins/convert.php:65
+msgid "Database convert complete!"
+msgstr "Die Datenbankkonvertierung war erfolgreich!"
+
+#: plugins/convert.php:67
+msgid ""
+"Either your database tables were already created with the InnoDB storage "
+"engine, or the convert process is completed successfully."
+msgstr ""
+"Entweder wurden deine Datenbanktabellen bereits mit dem InnoDB "
+"Speichersubsystem erstellt oder der Konvertierungsprozess bereits "
+"erfolgreich abgeschlossen."
+
+#: plugins/optimize.php:12
+msgid "Optimize MySQL tables"
+msgstr "MySQL-Tabellen optimieren"
+
+#: plugins/optimize.php:14
+msgid ""
+"Keeping your WordPress database optimized is <em>a must</em> for a well "
+"performing WordPress website. Your plugin authors over at "
+msgstr ""
+"Die WordPress-Datenbank in Schuss zu halten ist <em>ein Muss</em> für eine "
+"performante WordPress-Website. Deine Plugin-Autoren von "
+
+#: plugins/optimize.php:16
+msgid "Vevida"
+msgstr "Vevida"
+
+#: plugins/optimize.php:18
+msgid "care about your site performance."
+msgstr "sorgen für die Performance deiner Seite vor."
+
+#: plugins/optimize.php:19
+msgid ""
+"Every WordPress post, draft, revision and comment adds data to your MySQL "
+"database, and removing revisions, drafts and comments creates empty space "
+"between data. This makes your database bigger and more fragmented. "
+"Defragmenting the data puts all data back in order and removes empty space. "
+"This results in a smaller database. The defragmented database performs "
+"faster because MySQL will be able to locate information much faster. "
+msgstr ""
+"Jeder WordPress Beitrag, Entwurf, Revision und Kommentar fügt Daten zu "
+"deiner MySQL-Datenbank hinzu und das Entfernen von Revisionen, Entwürfen und "
+"Kommentaren hinterlässt Leerräume zwischen den Daten. Das macht deine "
+"Datenbank größer und fragmentierter. Das Defragmentieren der Daten bringt "
+"alle Daten wieder in die richtige Reihenfolge und entfernt die Leerräume. "
+"Dadurch wird die Datenbank kleiner. Die defragmentierte Datenbank performt "
+"viel schneller, da MySQL die Informationen viel schneller lokalisieren kann. "
+
+#: plugins/optimize.php:20
+msgid ""
+"Pressing the button below performs an MySQL optimization by executing an "
+"<code>OPTIMIZE TABLE</code> statement on all WordPress MySQL tables. All "
+"other, non-WordPress tables remain untouched."
+msgstr ""
+"Das Klicken des unten stehenden Buttons führt eine MySQL-Optimierung durch, "
+"die den Befehl <code>OPTIMIZE TABLE</code> bei allen MySQL-Tabellen von "
+"WordPress ausführt. Alle anderen Tabellen, die nicht zu WordPress gehören, "
+"bleiben davon unverändert."
+
+#: plugins/optimize.php:38 vevida-optimizer.php:115
+msgid "Optimize MySQL database tables"
+msgstr "MySQL-Datenbanktabellen optimieren"
+
+#: plugins/optimize.php:52
+msgid ""
+"Turns out DB optimization went wrong... Please check your PHP error log file."
+msgstr ""
+"Die Datenbankoptimierung ist schief gegangen… Bitte prüfe deine PHP-"
+"Fehlerprotokolldatei."
+
+#: plugins/optimize.php:56
+msgid "MySQL database optimization successful!"
+msgstr "Die MySQL-Datenbankoptimierung war erfolgreich!"
+
+#: plugins/optimize.php:58
+msgid "You MySQL database tables were successfully optimized!"
+msgstr "Deine MySQL-Datenbanktabellen wurden erfolgreich optimiert!"
+
+#: vevida-optimizer.php:101
+msgid "Update Settings"
+msgstr "Einstellungen Aktualisierungen"
+
+#: vevida-optimizer.php:109
+msgid "Convert MyISAM to InnoDB"
+msgstr "MyISAM zu InnoDB konvertieren"
+
+#: vevida-optimizer.php:128
+msgid "Automatic update settings"
+msgstr "Einstellungen für automatische Aktualisierungen"
+
+#: vevida-optimizer.php:129
+msgid ""
+"It is possible to disable the different kinds of automatic updates. Also, "
+"updates for specific plugins can be disabled. Only use this option when "
+"automatically updating a plugin is not possible or problematic."
+msgstr ""
+"Es ist möglich, die unterschiedlichen Arten der automatischen "
+"Aktualisierungen zu deaktivieren. Zudem können die Aktualisierungen für "
+"bestimmte Plugins deaktiviert werden. Benutze diese Option nur, wenn das "
+"automatische Aktualisieren eines Plugins nicht möglich oder problematisch "
+"ist."
+
+#: vevida-optimizer.php:149
+msgid "Enable or disable automatic updates"
+msgstr "Automatische Aktualisierungen aktivieren oder deaktivieren"
+
+#: vevida-optimizer.php:155
+msgid "Update to new major version"
+msgstr "Hauptversionen aktualisieren"
+
+#: vevida-optimizer.php:161
+msgid "e.g. WordPress 4.4 to 4.5"
+msgstr "z.B. WordPress 4.4 auf 4.5"
+
+#: vevida-optimizer.php:166
+msgid "Update to new minor version"
+msgstr "Nebenversionen aktualisieren"
+
+#: vevida-optimizer.php:172
+msgid "e.g. WordPress 4.4.1 to 4.4.2"
+msgstr "z.B. WordPress 4.4.1 auf 4.4.2"
+
+#: vevida-optimizer.php:177
+msgid "Update themes"
+msgstr "Themes aktualisieren"
+
+#: vevida-optimizer.php:188
+msgid "Update Translations"
+msgstr "Übersetzungen aktualisieren"
+
+#: vevida-optimizer.php:201
+msgid "Enable or disable plugin updates"
+msgstr "Automatische Plugin-Aktualisierungen aktivieren oder deaktivieren"
+
+#: vevida-optimizer.php:228
+msgid "Send email notifications"
+msgstr "E-Mail-Benachrichtigungen versenden"
+
+#: vevida-optimizer.php:234
+msgid "Enable notifications"
+msgstr "Benachrichtigungen aktivieren"
+
+#: vevida-optimizer.php:249
+msgid ""
+"All updates are enabled by default. Only change this if your website "
+"experiences issues after an automatic update. In that case, resolve the "
+"issue that blocks the automatic update process, and reenable automatic "
+"updates."
+msgstr ""
+"Alle Aktualisierungen sind standardmäßig aktiviert. Ändere dies nur, wenn "
+"deine Website nach einer automatischen Aktualisierung Probleme verzeichnet. "
+"Löse in diesem Fall das Problem, das den automatischen "
+"Aktualisierungsprozess blockiert, und aktiviere die automatischen "
+"Aktualisierungen wieder."
+
+#: vevida-optimizer.php:252
+msgid ""
+"Some plugins require a different update method. Or the plugin simpy breaks "
+"as a result of the update. In that case automatic updates for the plugin can "
+"be (temporarily) disabled."
+msgstr ""
+"Manche Plugins benötigen eine andere Maßnahme zur Aktualisierung. Oder das "
+"Plugin geht aufgrund der Aktualisierung einfach kaputt. In diesem Fall "
+"können automatische Aktualisierungen (temporär) deaktiviert werden."
+
+#: vevida-optimizer.php:255
+msgid ""
+"An email can be sent after each automatic update to notify the site admin ("
+msgstr ""
+"Eine E-Mail kann nach jeder automatischen Aktualisierung an den "
+"Administrator der Seite versendet werden ("
+
+#: vevida-optimizer.php:257
+msgid ""
+") of the update. This can be useful in troubleshooting the site after an "
+"automatic update."
+msgstr ""
+"). Dies kann bei der Fehlerbehebung nach einer automatischen Aktualisierung "
+"nützlich sein."
+
+#: vevida-optimizer.php:269
+msgid "Settings"
+msgstr "Einstellungen"
+
+#. Plugin Name of the plugin/theme
+msgid "Vevida Optimizer"
+msgstr "Vevida Optimizer"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/vevida-optimizer/"
+msgstr "https://wordpress.org/plugins/vevida-optimizer/"
+
+#. Description of the plugin/theme
+msgid ""
+"Configure automatic updates for each WordPress component, and optimize the "
+"mySQL database tables."
+msgstr ""
+"Konfiguriere die automatischen Updates für jede Komponente in WordPress und "
+"optimiere die MySQL-Datenbanktabellen."
+
+#. Author of the plugin/theme
+msgid "Jan Vlastuin, Jan Reilink"
+msgstr "Jan Vlastuin, Jan Reilink"
+
+#. Author URI of the plugin/theme
+msgid "http://vevida.hosting"
+msgstr "http://vevida.hosting"
