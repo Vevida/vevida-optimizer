@@ -70,16 +70,16 @@ function vevida_convert_tables() {
 			table_name
 			FROM information_schema.statistics
 			WHERE index_type = 'FULLTEXT'
-			AND table_name = ".'{$row->table_name}');
+			AND table_name =  '{$row->table_name}'");
 	if ( $fulltextIndex ) {
             continue;
 	}
-        $wpdb->query("ALTER TABLE `{$row->table_name}` ENGINE=InnoDB");
+        $wpdb->query("ALTER TABLE {$row->table_name} ENGINE=InnoDB");
     }
 
-    $indexResults = $wpdb->get_results("SHOW INDEXES FROM `{$wpdb->options}` WHERE Column_name='autoload'");
+    $indexResults = $wpdb->get_results("SHOW INDEXES FROM {$wpdb->options} WHERE Column_name='autoload'");
     if (!$indexResults) {
-        $addedIndex = $wpdb->query("ALTER TABLE `{$wpdb->options}` ADD INDEX autoload(`autoload`)");
+        $addedIndex = $wpdb->query("ALTER TABLE {$wpdb->options} ADD INDEX autoload(`autoload`)");
         if (!$addedIndex) {
             // ALTER TABLE returned an error
             $wpdb->show_errors();
