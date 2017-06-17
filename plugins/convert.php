@@ -64,13 +64,13 @@ function vevida_optimizer_convert_myisam_innodb() {
 
 function vevida_convert_tables() {
     global $wpdb;
-    foreach ( $wpdb->get_results("SELECT table_name FROM information_schema.tables WHERE ENGINE = 'MyISAM' AND table_name LIKE '{$wpdb->prefix}%'")  as $key => $row) {
+    foreach ( $wpdb->get_results("SELECT table_name FROM information_schema.tables WHERE ENGINE = 'MyISAM' AND table_name LIKE '$wpdb->prefix%'")  as $key => $row) {
         $fulltextIndex = $wpdb->get_results("SELECT
 			table_schema,
 			table_name
 			FROM information_schema.statistics
 			WHERE index_type = 'FULLTEXT'
-			AND table_name =  '{$row->table_name}'");
+			AND table_name = '$row->table_name'");
 	if ( $fulltextIndex ) {
             continue;
 	}

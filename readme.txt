@@ -2,8 +2,8 @@
 Contributors: vlastuin, janr
 Tags: auto-update, updates, MySQL optimization, update, automatic update, vevida, hosting
 Requires at least: 3.9
-Tested up to: 4.5.3
-Stable tag: 1.1.1
+Tested up to: 4.8
+Stable tag: 1.1.5
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,32 +15,13 @@ Released under the terms of the GNU General Public License.
 
 == Description ==
 
-Installing WordPress is one thing, keeping it up to date is something else. Each 
-week brings new bugs or potential attack scenarios that will make a WordPress 
-website vulnerable to hacks. Enabling automatic updates for all or at least most 
-parts of WordPress solves a large number of problems with irregularly maintained 
-WordPress websites.
+Installing WordPress is one thing, keeping it up to date is something else. Each week brings new bugs or potential attack scenarios that will make a WordPress website vulnerable to hacks. Enabling automatic updates for all or at least most parts of WordPress solves a large number of problems with irregularly maintained WordPress websites.
  
-This plugin extends the automatic update feature already present in WordPress. 
-The core updates can be switched on or off, themes and translations can be 
-automatically updated, and the plugin updates can be configured on a per-plugin 
-basis. 
+This plugin extends the automatic update feature already present in WordPress.  The core updates can be switched on or off, themes and translations can be automatically updated, and the plugin updates can be configured on a per-plugin basis. 
 
-Many websites started originally with older versions of 
-WordPress. Previously those installs used older versions of MySQL, when the 
-default table format was MyISAM. Nowadays, modern versions of MySQL use the 
-InnoDB format, which is currently enabled by default. Through this plugin 
-the database tables can be optimized for those newer versions of MySQL, 
-converting older MyISAM tables to InnoDB. 
-This is required only once, and only when you have been using WordPress for a 
-long time or with a hosting provider that has not actively kept its MySQL 
-installations up to date.
+Many websites started originally with older versions of WordPress. Previously those installs used older versions of MySQL, when the default table format was MyISAM. Nowadays, modern versions of MySQL use the InnoDB format, which is currently enabled by default. Through this plugin the database tables can be optimized for those newer versions of MySQL, converting older MyISAM tables to InnoDB.  This is required only once, and only when you have been using WordPress for a long time or with a hosting provider that has not actively kept its MySQL installations up to date.
 
-Vevida is a major webhosting provider based in The Netherlands. We have been 
-hosting websites since 1997. We offer specialized WordPress hosting, which 
-includes this plugin by default. This plugin is useful for all WordPress users, 
-so we make the latest version of this plugin available in the WordPress 
-repository. The source code is also freely available on GitHub.
+Vevida is a major webhosting provider based in The Netherlands. We have been hosting websites since 1997. We offer specialized WordPress hosting, which includes this plugin by default. This plugin is useful for all WordPress users, so we make the latest version of this plugin available in the WordPress repository. The source code is also freely available on GitHub.  
 
 == Installation ==
 
@@ -49,62 +30,68 @@ repository. The source code is also freely available on GitHub.
 1. Configure automatic updates through 'Dashboard' -> 'Update Settings'
 1. Optimize your MySQL database through 'Tools' -> 'Convert DB tables'
 
-Or login to WordPress. Go to Plugins -> Add New and search for Vevida. The search
-box is located at the top right of the page. Click Install and enjoy 
-automatic updates.
+Or login to WordPress. Go to Plugins -> Add New and search for Vevida. The search box is located at the top right of the page. Click Install and enjoy automatic updates.
 
 == Frequently Asked Questions ==
 
 = How can I configure Auto-Updates? =
 
-Go to 'Dashboard' -> 'Update Settings'. The core updates can be switched on or 
-off, themes and translations can be automatically updated, and individual plugin 
-updates can also be configured.
+Go to 'Dashboard' -> 'Update Settings'. The core updates can be switched on or off, themes and translations can be automatically updated, and individual plugin updates can also be configured.
 
 = Why would I use Auto-Updates? =
 
-Not updating your WordPress site regularly exposes your site and your hosting 
-provider to bugs and other attack vectors that can enable an attacker to hack 
-into your website. Keeping your WordPress website up-to-date is one of the key 
-ingredients to keeping your website secure.
+Not updating your WordPress site regularly exposes your site and your hosting provider to bugs and other attack vectors that can enable an attacker to hack into your website. Keeping your WordPress website up-to-date is one of the key ingredients to keeping your website secure.
 
 = Why would I not use Auto-Updates? =
 
-If you are an expert user of WordPress, and you are always available to test each 
-and every new version of each and every plugin, theme and core update before deploying
-them to your server, then you don't need this plugin. However, the plugin offers
-a unique selection mechanism whereby only those parts you want to auto-update, 
-will in fact auto-update.
+If you are an expert user of WordPress, and you are always available to test each and every new version of each and every plugin, theme and core update before deploying them to your server, then you don't need this plugin. However, the plugin offers a unique selection mechanism whereby only those parts you want to auto-update, will in fact auto-update.
 
 = Why has this or that plugin not been updated yet? =
 
-First check whether automatic updates are enabled for the plugin in 'Dashboard' 
--> 'Update Settings'. If automatic updates are enabled, it can take up to 12 
-hours for a plugin to actually update.
+First check whether automatic updates are enabled for the plugin in 'Dashboard' -> 'Update Settings'. If automatic updates are enabled, it can take up to 12 hours for a plugin to actually update.
 
 = How can I optimize my database tables =
 
-Go to Tools -> Convert DB tables. This will launch the utility that converts 
-MyISAM tables to InnoDB.
+Go to Tools -> Convert DB tables. This will launch the utility that converts MyISAM tables to InnoDB.
 
 = Why would I convert my database tables? =
 
-Many older versions of MySQL used MyISAM tables by default. Nowadays InnoDB is 
-used by recent versions of MySQL, and this is a much faster format. If you have 
-created your WordPress site in the past on previous versions of MySQL, chances 
-are that you still use MyISAM.
+Many older versions of MySQL used MyISAM tables by default. Nowadays InnoDB is used by recent versions of MySQL, and this is a much faster format. If you have created your WordPress site in the past on previous versions of MySQL, chances are that you still use MyISAM.
 
 = Can I use this plugin on hosting platforms other than at vevida.com? =
 
-Of course you can, and we encourage you to use our plugin to keep your website
-up to date. That's why we made it available in the WordPress repository, and the 
-source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
+Of course you can, and we encourage you to use our plugin to keep your website up to date. That's why we made it available in the WordPress repository, and the source code is available on GitHub: https://github.com/vlastuin/vevida-optimizer
 
 == Screenshots ==
 
 1. The submenu under 'Dashboard' that allows the configuration of automatic updates.
 
 == Changelog ==
+
+= 1.1.5 =
+Release date: June 17th 2017
+* Fix: Table conversion bug solved
+* Adapted readme.txt to new WordPress website
+* Compatibility with WP 4.8
+
+= 1.1.4 = 
+Release date: October 19th 2016
+
+* Fix: removed more unnecessary curly braces
+* Change: removed unwanted newlines
+
+= 1.1.3 =
+Release date: October 19th 2016
+
+* Bug fix: InnoDB conversion did not complete correctly for all tables (thanks to 
+  simonmm)
+
+= 1.1.2 =
+Release date: August 17th 2016
+
+* Bug fix: Auto-update for minor version updates could not be disabled seperately
+  (thanks to noplanman)
+* New: German translation (thanks to hofmannsven)
 
 = 1.1.1 = 
 Release date: June 26th 2016

@@ -12,7 +12,9 @@ function vevida_optimize_db_tables() {
             <h2><?php _e( 'Optimize MySQL tables', 'vevida-optimizer' ); ?></h2>
 
             <p><?php _e( 'Keeping your WordPress database optimized is <em>a must</em> for a well performing WordPress website. Your plugin authors over at ','vevida-optimizer' ); ?>
-			<a href="https://vevida.com" title="WordPress hosting made easy by Vevida"><?php _e( 'Vevida', 'vevida-optimizer' ); ?></a>
+			<a href="https://vevida.com" title="WordPress hosting made easy by Vevida">
+			<?php _e( 'Vevida', 'vevida-optimizer' ); ?>
+			</a>
 			<?php _e( 'care about your site performance.', 'vevida-optimizer' ); ?></p>
             <p><?php _e( 'Every WordPress post, draft, revision and comment adds data to your MySQL database, and removing revisions, drafts and comments creates empty space between data. This makes your database bigger and more fragmented. Defragmenting the data puts all data back in order and removes empty space. This results in a smaller database. The defragmented database performs faster because MySQL will be able to locate information much faster. ', 'vevida-optimizer' ); ?>
             <?php _e( 'Pressing the button below performs an MySQL optimization by executing an <code>OPTIMIZE TABLE</code> statement on all WordPress MySQL tables. All other, non-WordPress tables remain untouched.', 'vevida-optimizer' ); ?>
