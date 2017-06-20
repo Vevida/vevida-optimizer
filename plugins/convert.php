@@ -30,8 +30,13 @@ function vevida_convert_db_tables() {
                             '_ajax_nonce': '<?php echo wp_create_nonce( 'vevida-optimizer-nonce' ); ?>'
                     };
 
+                    var submitButton = document.getElementById('vevida_optimizer_convert');
+                    var feedbackElement = document.getElementById('vevida-optimizer-convert');
+                    submitButton.setAttribute('disabled', 'disabled');
+                    feedbackElement.innerHTML = '<p><img src="<?php echo VEVIDAOPTIMIZERURL; ?>public/images/lader-logo.gif" alt="Please wait..."/></p>';
                     $.post( ajaxurl, data, function( response ) {
-                        document.getElementById('vevida-optimizer-convert').innerHTML = response;
+                        submitButton.removeAttribute('disabled');
+                        feedbackElement.innerHTML = response;
                     });
                 });
             });

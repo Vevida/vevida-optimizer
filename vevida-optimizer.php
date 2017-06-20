@@ -21,6 +21,9 @@ if ( ! function_exists( 'add_action' ) ) {
 if( !defined( 'VEVIDAOPTIMIZERHOME' ) )
 	define('VEVIDAOPTIMIZERHOME', dirname(__FILE__).'/');
 
+if( !defined( 'VEVIDAOPTIMIZERURL' ) )
+	define('VEVIDAOPTIMIZERURL', plugin_dir_url(__FILE__));
+
 if( !isset( $vevida_optimizer_plugins_dir ) )
 	$vevida_optimizer_plugins_dir = VEVIDAOPTIMIZERHOME . 'plugins';
 
