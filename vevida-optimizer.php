@@ -78,6 +78,7 @@ function vevida_optimizer_init_plugin() {
 	add_option( 'vevida_optimizer_theme_updates', true );
 	add_option( 'vevida_optimizer_translations_updates', true );
 	add_option( 'vevida_optimizer_send_email', true );
+	add_option( 'vevida_optimizer_admin_email', '' );
 	$loaded_plugins = get_plugins();
 	foreach ($loaded_plugins as $key => $val) {
 		$plugin_array = explode( '/', $key );
@@ -89,8 +90,19 @@ function vevida_optimizer_init_plugin() {
 }
 add_action( 'admin_init', 'vevida_optimizer_init_plugin' );
 
+/** Replace default email adress (admin_email) for update emails when configured */
+function vevida_optimizer_update_email ( $email ) {
+	$admin_email = get_option( 'vevida_optimizer_admin_email' );
+	if ( $admin_email !== '' ) {
+		$email['to'] = $admin_email;
+	}
+	return $email;
+}
+
 if ( get_option( 'vevida_optimizer_send_email') ) {
 	add_filter( 'automatic_updates_send_debug_email', '__return_true' );
+	add_filter( 'auto_core_update_email', 'vevida_optimizer_update_email' );
+	add_filter( 'automatic_updates_debug_email', 'vevida_optimizer_update_email' );
 }
 
 /** Build admin pages, using Settings API **/
@@ -240,6 +252,20 @@ function vevida_optimizer_settings_init() {
 			'' )
 	);
 	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_send_email' );
+	add_settings_field(
+		'vevida_optimizer_admin_email',
+		__( 'Email address', 'vevida-optimizer' ),
+		'vevida_optimizer_input_callback',
+		'vevida_optimizer_settings',
+		'vevida_optimizer_settings_section_3',
+		array (
+			'email',
+			'vevida_optimizer_admin_email',
+			__( 'Leave empty to use the default admin email address', 'vevida-optimizer' )
+					. ' (' . get_option( 'admin_email' ) . ')'
+		)
+	);
+	register_setting( 'vevida_optimizer_settings_group', 'vevida_optimizer_admin_email', 'vevida_optimizer_validate_email' );
 }
 add_action( 'admin_init', 'vevida_optimizer_settings_init' );
 
@@ -251,9 +277,7 @@ function vevida_optimizer_settings_section_2_callback() {
 	_e( 'Some plugins require a different update method. Or the plugin simpy breaks as a result of the update. In that case automatic updates for the plugin can be (temporarily) disabled.', 'vevida-optimizer' );
 }
 function vevida_optimizer_settings_section_3_callback() {
-	_e( 'An email can be sent after each automatic update to notify the site admin (', 'vevida-optimizer' );
-	echo get_option( 'admin_email' );
-	_e( ') of the update. This can be useful in troubleshooting the site after an automatic update.', 'vevida-optimizer' );
+	_e( 'An email can be sent after each automatic update to notify the site admin of the update. This can be useful in troubleshooting the site after an automatic update.', 'vevida-optimizer' );
 }
 
 function vevida_optimizer_checkbox_callback( $args ) {
@@ -261,6 +285,29 @@ function vevida_optimizer_checkbox_callback( $args ) {
 	$html = '<input type="checkbox" id="'.$args[0].'" name="'.$args[0].'" value="1"' . checked( 1, $option, false ) . '/>';
 	$html .= '<label for="'.$args[0].'">'.$args[1].'</label>';
 	echo $html;
+}
+
+function vevida_optimizer_input_callback( $args ) {
+	$option = get_option( $args[1] );
+	$html = '<input type="' . $args[0] . '" id="' . $args[1] . '"' .
+			' name="' . $args[1] . '" value="' . $option . '" />';
+	if (count($args) === 3) {
+		$html .= '<br/>' . $args[2];
+	}
+	echo $html;
+}
+
+function vevida_optimizer_validate_email( $email ) {
+	if ( $email === '' ) { // allow empty
+		return '';
+	}
+	$validated_email = filter_var( $email, FILTER_VALIDATE_EMAIL );
+	if ( $validated_email === false ) {
+		add_settings_error( 'vevida_optimizer_settings', 'invalid-email',
+				__( 'You have entered an invalid email address' ) );
+		return '';
+	}
+	return $validated_email;
 }
 
 //Adds settings link on Installed Plugins page
