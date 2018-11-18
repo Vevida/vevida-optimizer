@@ -22,7 +22,6 @@ function vevida_optimizer_scripts() {
 	$plugin_url = plugin_dir_url( __FILE__ );
 	wp_enqueue_style( 'style',  $plugin_url . "/css/style.css");
 }
-
 add_action( 'admin_enqueue_scripts', 'vevida_optimizer_scripts' );
 
 if( !defined( 'VEVIDAOPTIMIZERHOME' ) )
@@ -277,19 +276,19 @@ add_action( 'admin_init', 'vevida_optimizer_settings_init' );
 
 /** Format Callbacks **/
 function vevida_optimizer_settings_section_1_callback() {
-	_e ('<div class="description">'); 
+	echo '<div class="description">';
 	_e( 'All updates are enabled by default. Only change this if your website experiences issues after an automatic update. In that case, resolve the issue that blocks the automatic update process, and reenable automatic updates.', 'vevida-optimizer' );
-	_e ('</div>');
+	echo '</div>';
 }
 function vevida_optimizer_settings_section_2_callback() {
-	_e ('<div class="description">'); 
+	echo '<div class="description">';
 	_e( 'Some plugins require a different update method. Or the plugin simpy breaks as a result of the update. In that case automatic updates for the plugin can be (temporarily) disabled.', 'vevida-optimizer' );
-	_e ('</div>');
+	echo '</div>';
 }
 function vevida_optimizer_settings_section_3_callback() {
-	_e ('<div class="description">'); 
+	echo '<div class="description">';
 	_e( 'An email can be sent after each automatic update to notify the site admin of the update. This can be useful in troubleshooting the site after an automatic update.', 'vevida-optimizer' );
-	_e ('</div>');
+	echo '</div>';
 }
 
 function vevida_optimizer_checkbox_callback( $args ) {
