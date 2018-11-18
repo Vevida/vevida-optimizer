@@ -1,0 +1,26 @@
+
+.dashboard_page_vevida-optimizer h2 {
+    margin-top: 4em;
+}
+
+.dashboard_page_vevida-optimizer .gears {
+    width: 48px;
+    height: 48px;
+    fill: #ccc;
+    float: left;
+    margin-right: 20px;
+}
+
+.dashboard_page_vevida-optimizer table {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px #ccc;
+    background-color: white;
+}
+
+.dashboard_page_vevida-optimizer .form-table th {
+    padding-left: 20px;
+}
+
+.dashboard_page_vevida-optimizer p, .description {
+    max-width: 70%;
+}
