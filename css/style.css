@@ -21,6 +21,8 @@
     padding-left: 20px;
 }
 
-.dashboard_page_vevida-optimizer p, .description {
-    max-width: 70%;
+@media only screen and (min-width: 900px) {
+    .dashboard_page_vevida-optimizer p, .description {
+        max-width: 70%;
+    }
 }
