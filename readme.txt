@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: vlastuin, janr
+Contributors: vlastuin, janr, ixium
 Tags: auto-update, updates, MySQL optimization, update, automatic update, vevida, hosting
 Requires at least: 3.9
 Tested up to: 5.0
