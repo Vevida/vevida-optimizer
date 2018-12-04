@@ -68,6 +68,10 @@ Of course you can, and we encourage you to use our plugin to keep your website u
 
 == Changelog ==
 
+= 1.3 =
+Release date: December 4th 2018
+* Updated UI in the WP dashboard (thanks to ixium)
+
 = 1.2 =
 Release date: November 13th 2017
 * Added a spinner to indicate that the conversion process is running
