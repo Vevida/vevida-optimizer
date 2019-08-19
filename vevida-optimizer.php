@@ -39,7 +39,7 @@ if( is_array( $plugins ) ) {
  * Load stylesheet for the optimizer options page.
  */
 function vevida_optimizer_style() {
-	wp_enqueue_style( 'style',  VEVIDAOPTIMIZERURL . "/css/style.css");
+	wp_enqueue_style( 'style',  VEVIDAOPTIMIZERURL . "css/style.css");
 }
 add_action( 'admin_enqueue_scripts', 'vevida_optimizer_style' );
 
