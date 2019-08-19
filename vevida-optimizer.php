@@ -18,12 +18,6 @@ if ( ! function_exists( 'add_action' ) ) {
 	exit;
 }
 
-function vevida_optimizer_scripts() {
-	$plugin_url = plugin_dir_url( __FILE__ );
-	wp_enqueue_style( 'style',  $plugin_url . "/css/style.css");
-}
-add_action( 'admin_enqueue_scripts', 'vevida_optimizer_scripts' );
-
 if( !defined( 'VEVIDAOPTIMIZERHOME' ) )
 	define('VEVIDAOPTIMIZERHOME', dirname(__FILE__).'/');
 
@@ -40,6 +34,15 @@ if( is_array( $plugins ) ) {
 		require_once( $plugin );
 	}
 }
+
+/**
+ * Load stylesheet for the optimizer options page.
+ */
+function vevida_optimizer_style() {
+	$plugin_url = plugin_dir_url( __FILE__ );
+	wp_enqueue_style( 'style',  $plugin_url . "/css/style.css");
+}
+add_action( 'admin_enqueue_scripts', 'vevida_optimizer_style' );
 
 /**
  * Load textdomain for vevida optimizer plugin
