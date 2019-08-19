@@ -38,7 +38,10 @@ if( is_array( $plugins ) ) {
 /**
  * Load stylesheet for the optimizer options page.
  */
-function vevida_optimizer_style() {
+function vevida_optimizer_style($page) {
+	if ($page !== 'dashboard_page_vevida-optimizer') {
+		return;
+	}
 	wp_enqueue_style( 'style',  VEVIDAOPTIMIZERURL . "css/style.css");
 }
 add_action( 'admin_enqueue_scripts', 'vevida_optimizer_style' );
