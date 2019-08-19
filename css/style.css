@@ -23,7 +23,7 @@
 
 @media only screen and (min-width: 900px) {
     .dashboard_page_vevida-optimizer p,
-	.dashboard_page_vevida-optimizer .description {
+    .dashboard_page_vevida-optimizer .description {
         max-width: 70%;
     }
 }
