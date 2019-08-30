@@ -68,6 +68,12 @@ Of course you can, and we encourage you to use our plugin to keep your website u
 
 == Changelog ==
 
+= 1.4 =
+Release date: August 30th 2019
+* Load stylesheet only when needed (fixes style issue in the Customizer)
+* Updated screenshot for UI changes in 1.3
+* Updated code to adhere to WordPress Coding standard
+
 = 1.3 =
 Release date: December 4th 2018
 * Updated UI in the WP dashboard (thanks to ixium)
