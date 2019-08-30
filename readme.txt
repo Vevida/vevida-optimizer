@@ -3,7 +3,7 @@ Contributors: vlastuin, janr, ixium
 Tags: auto-update, updates, MySQL optimization, update, automatic update, vevida, hosting
 Requires at least: 3.9
 Tested up to: 5.0
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

@@ -3,7 +3,7 @@
  * Plugin Name: Vevida Optimizer
  * Plugin URI: https://wordpress.org/plugins/vevida-optimizer/
  * Description: Configure automatic updates for each WordPress component, and optimize the mySQL database tables.
- * Version: 1.3
+ * Version: 1.4
  * Author: Jan Vlastuin, Jan Reilink, Brian Stal
  * Author URI: https://vevida.com
  * License: GPLv2
